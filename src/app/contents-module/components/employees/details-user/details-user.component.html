@@ -1,0 +1,408 @@
+ 
+<!---------------------------------visualizar datos de un usuario------------------------>
+
+
+<ng-container *ngIf="this.KeyDetails === true; else updateUser">
+    <div><h1 class="title-styles-components">Detalles de Funcionario</h1></div>
+    <button type="button" class="btnUpdate btn btn-outline-success" (click)="UpdateUser()">Actualizar Datos</button>
+
+    <div class="style-forms "><!--las dos ultimas clases pertenecen a estilos personalizados NO son de bootstrap4-->
+        <table class="table col-md-12" >
+            <thead class="thead-dark col-md-6" >
+            <tr class="col-md-12">
+                <th>Usuario: </th>
+                <th >Permisos Por Usuario:</th>
+            </tr>
+            </thead>
+            <tbody class="col-md-6">
+                <tr class="col-md-12">
+                    <td class="col-md-6" ><!--aqui va el cuerpo de los datos del usuario -->
+                      <tr *ngFor="let item of UserData | keyvalue" class="col-md-12" >
+                        <td ><i class="fas fa-arrow-alt-circle-right"></i></td>
+                          <td><b> {{item.key}}</b></td> 
+                          <td>{{item.value}}</td>
+                      </tr> 
+                    </td> 
+                    <td  class="col-md-6" *ngIf="PermissionsData[0]===null; else viewPermissions" ><!--si en la primera posicion de la lista hay un null significa que no tiene permisos que mostrar por lo tanto muestra un texto --> 
+                        <tr>
+                            <td><i class="fas fa-check-circle"></i></td>
+                            <td>El Usuario no Tiene Permisos que mostrar!!<td>
+                        </tr>
+                    </td> 
+                    <ng-template #viewPermissions><!--aqui va el cuerpo de los datos de los permisos--> 
+                        <td>
+                            <tr *ngFor="let item of PermissionsData" >
+                                <td><i class="fas fa-check-circle"></i></td>
+                                <td>{{item.data.name}}</td>
+                            </tr>
+                        </td>
+                    </ng-template>
+                </tr> 
+            </tbody>
+        </table>
+    </div>   
+</ng-container>
+<!---------------------------------fin visualizar datos de un usuario------------------------>
+
+<!-------------------------------inicio formulario actualizacion usuario--------------------->
+
+<ng-template #updateUser>
+    <div><h1 class="title-styles-components">Actualizar de Funcionario</h1></div>
+
+    <div class="style-forms ">
+        <table class="table col-md-12" >
+            <thead class="thead-dark col-md-6" >
+            <tr class="col-md-12">
+                <th>Usuario: </th>
+                <th >Permisos Por Usuario:</th>
+            </tr>
+            </thead>
+            <tbody class="col-md-6">
+                <tr class="col-md-12">
+                    <td class="col-md-6" >
+                        <form [formGroup]="formEmployee" class="col-md-12 container-fluid">
+                            <tr class="form-group col-md-12">
+                                    <td>
+                                        <label for="documentNumber">Documento de Identidad: </label>
+                                    </td>
+                                    <td>
+                                        <input formControlName="documentNumber" type="text" class="form-control">
+                                        <div *ngIf="!fEmployee.documentNumber.valid && fEmployee.documentNumber.touched" class="alert alert-danger">
+                                            
+                                            <div [hidden]="fEmployee.documentNumber.errors.minLength">Mas de 8 numeros </div>
+                                            <div [hidden]="!fEmployee.documentNumber.errors.required">No puede estar vacio</div>
+                                        </div>
+                                    </td>
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                    <td>
+                                        <label for="name">Nombre: </label>
+                                    </td>
+                                    <td>
+                                        <input formControlName="name" type="text" class="form-control">
+                                        <div *ngIf="!fEmployee.name.valid && fEmployee.name.touched" class="alert alert-danger">
+                                            <div [hidden]="!fEmployee.name.errors.minLength">Mas de 3 Caracteres</div>
+                                            <div [hidden]="!fEmployee.name.errors.required">No puede estar vacio</div>
+                                        </div>
+                                    </td>
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                    <td>
+                                        <label for="lastName">Apellido: </label>
+                                    </td>
+                                    <td>
+                                        <input formControlName="lastName" type="text" class="form-control">
+                                        <div *ngIf="!fEmployee.lastName.valid && fEmployee.lastName.touched" class="alert alert-danger">
+                                        <div [hidden]="!fEmployee.lastName.errors.minLength">Mas de 3 Caracteres</div>
+                                        <div [hidden]="!fEmployee.lastName.errors.required">No puede estar vacio</div>
+                                        </div>
+                                    </td>
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                    <td>
+                                        <label class="col-md-12" for="sex">Genero: </label>
+                                    </td>
+                                    <td>                       
+                                        <label class="col-md-4" *ngFor="let item of listSex" >
+                                        <input formControlName="sex" class="form-control" type="radio" [value]="item" name="sex" [id]="item" >
+                                        {{item}}   
+                                        </label>  
+                                    </td>                     
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                    <td>
+                                        <label for="birthYear">Fecha de Nacimiento: </label>
+                                    </td>
+                                    <td>
+                                        <input formControlName="birthYear" type="text" class="form-control">
+                                        <div *ngIf="!fEmployee.birthYear.valid && fEmployee.birthYear.touched" class="alert alert-danger">
+                                            <div [hidden]="!fEmployee.birthYear.errors.required">No puede estar vacio</div>
+                                        </div>
+                                    </td>
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                    <td>
+                                        <label for="address">Direccion de Residencia: </label>
+                                    </td>
+                                    <td>
+                                        <input formControlName="address" type="text" class="form-control">
+                                        <div *ngIf="!fEmployee.address.valid && fEmployee.address.touched" class="alert alert-danger">
+                                            <div [hidden]="fEmployee.address.errors.minLength">contraseña mas de 5 caracteres</div>
+                                            <div [hidden]="!fEmployee.address.errors.required">No puede estar vacio</div>
+                                        </div>
+                                    </td>
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                    <td>
+                                        <label for="neighborhood">Barrio de Residencia: </label>
+                                    </td>
+                                    <td>
+                                        <input formControlName="neighborhood" type="text" class="form-control">
+                                        <div *ngIf="!fEmployee.neighborhood.valid && fEmployee.neighborhood.touched" class="alert alert-danger">                           
+                                        <div [hidden]="!fEmployee.neighborhood.errors.required">No puede estar vacio</div>
+                                        <div [hidden]="fEmployee.neighborhood.errors.minLength">Mas de 4 caracteres</div>
+                                        </div>
+                                    </td>
+                            </tr> 
+                            <tr class="form-group col-md-12">
+                                <td>
+                                    <label for="phoneNumber">Numero de Telefono: </label>
+                                </td>
+                                <td>
+                                    <input formControlName="phoneNumber" type="text" class="form-control">
+                                    <div *ngIf="!fEmployee.phoneNumber.valid && fEmployee.phoneNumber.touched" class="alert alert-danger">
+                                        <div [hidden]="fEmployee.phoneNumber.errors.minLength">Mas de 5 caracteres</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                <td>
+                                    <label for="celphoneNumber">Numero de Celular: </label>
+                                </td>
+                                <td>
+                                    <input formControlName="celphoneNumber" type="text" class="form-control">
+                                    <div *ngIf="!fEmployee.celphoneNumber.valid && fEmployee.celphoneNumber.touched" class="alert alert-danger">
+                                        <div [hidden]="fEmployee.celphoneNumber.errors.minLength">Mas de 10 caracteres</div>
+                                        <div [hidden]="!fEmployee.celphoneNumber.errors.required">No puede estar vacio</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                <td>
+                                    <label for="hiringDate">Fecha de Contratacion: </label>
+                                </td>
+                                <td>
+                                    <input formControlName="hiringDate" type="text" class="form-control" disabled>
+                                    <div *ngIf="!fEmployee.hiringDate.valid && fEmployee.hiringDate.touched" class="alert alert-danger">
+                                        <div [hidden]="fEmployee.hiringDate.errors.minLength">Mas de 3 caracteres</div>
+                                        <div [hidden]="!fEmployee.hiringDate.errors.required">No puede estar vacio</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                    <td>
+                                        <label for="photo">Foto: </label>
+                                    </td>
+                                    <td>
+                                        <input formControlName="photo" type="text" class="form-control">
+                                        <div *ngIf="!fEmployee.photo.valid && fEmployee.photo.touched" class="alert alert-danger">
+                                            <div [hidden]="fEmployee.photo.errors.minLength">Mas de 3 caracteres</div>
+                                        </div>
+                                    </td>
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                    <td>
+                                        <label for="cityOfBirth">Ciudad de Nacimiento: </label>
+                                    </td>
+                                    <td>
+                                        <select formControlName="cityOfBirth" class="form-control" >
+                                            <option *ngFor="let itemCityBirth of listCityOfBirth" [value]="itemCityBirth">
+                                                {{itemCityBirth}}
+                                            </option>
+                                        </select>
+                                    </td>
+                            </tr> 
+                            <tr class="form-group col-md-12">
+                                <td>
+                                    <label for="active">Profesion: </label>
+                                </td>
+                                <td>
+                                    <select formControlName="profession" class="form-control" >
+                                        <option *ngFor="let itemProfession of listProfession" [value]="itemProfession" >
+                                            {{itemProfession}}
+                                        </option>
+                                    </select>
+                                </td>
+                            </tr>      
+                            <tr class="form-group col-md-12">
+                                <td>
+                                    <label for="divisionPosition">Cargo de Division o Departamento: </label>
+                                </td>
+                                <td>
+                                    <select formControlName="divisionPosition" class="form-control">
+                                        <option *ngFor="let itemDivisionPositions of divisionPositions" [value]="itemDivisionPositions.id">
+                                            {{itemDivisionPositions.name}}
+                                        </option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                <td>
+                                    <label for="netSalary">Salario Neto: </label>
+                                </td>
+                                <td>
+                                    <input formControlName="netSalary" type="text" class="form-control" disabled>
+                                    <div *ngIf="!fEmployee.netSalary.valid && fEmployee.netSalary.touched" class="alert alert-danger">
+                                        <div [hidden]="fEmployee.netSalary.errors.minLength">Mas de 3 caracteres</div>
+                                        <div [hidden]="!fEmployee.netSalary.errors.required">No puede estar vacio</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                <td>
+                                    <label for="contractModality">Modalidad de Contrato: </label>
+                                </td>
+                                <td>
+                                    <input formControlName="contractModality" type="text" class="form-control" disabled>
+                                    <div *ngIf="!fEmployee.contractModality.valid && fEmployee.contractModality.touched" class="alert alert-danger">
+                                        <div [hidden]="fEmployee.contractModality.errors.minLength">Mas de 3 caracteres</div>
+                                        <div [hidden]="!fEmployee.contractModality.errors.required">No puede estar vacio</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                <td>
+                                    <label for="socialSegurity">Seguridad Social: </label>
+                                </td>
+                                <td>
+                                    <input formControlName="socialSegurity" type="text" class="form-control" disabled>
+                                    <div *ngIf="!fEmployee.socialSegurity.valid && fEmployee.socialSegurity.touched" class="alert alert-danger">
+                                        <div [hidden]="fEmployee.socialSegurity.errors.minLength">Mas de 3 caracteres</div>
+                                        <div [hidden]="!fEmployee.socialSegurity.errors.required">No puede estar vacio</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                <td>
+                                    <label for="profesionalRisks">Riesgos Profesionales: </label>
+                                    </td>
+                                <td>
+                                <input formControlName="profesionalRisks" type="text" class="form-control" disabled>
+                                    <div *ngIf="!fEmployee.profesionalRisks.valid && fEmployee.profesionalRisks.touched" class="alert alert-danger">
+                                        <div [hidden]="fEmployee.profesionalRisks.errors.minLength">Mas de 3 caracteres</div>
+                                        <div [hidden]="!fEmployee.profesionalRisks.errors.required">No puede estar vacio</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                <td>
+                                    <label for="pension">Pension: </label>
+                                </td>
+                                <td>
+                                    <input formControlName="pension" type="text" class="form-control" disabled>
+                                    <div *ngIf="!fEmployee.pension.valid && fEmployee.pension.touched" class="alert alert-danger">
+                                        <div [hidden]="fEmployee.pension.errors.minLength">Mas de 3 caracteres</div>
+                                        <div [hidden]="!fEmployee.pension.errors.required">No puede estar vacio</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            
+                        </form>
+
+                        <form [formGroup]="form" class="col-md-12 container-fluid">
+                            
+                            <tr class="form-group col-md-12">
+                                <td> 
+                                   <label for="userName">Nombre de Usuario: </label>
+                                </td>
+                                <td> 
+                                    <input formControlName="userName" type="text" class="form-control">
+                                    <div *ngIf="!f.userName.valid && f.userName.touched" class="alert alert-danger">
+                                        <div [hidden]="f.userName.errors.minLength">Nombre mas de 3 caracteres</div>
+                                        <div [hidden]="!f.userName.errors.required">No puede estar vacio</div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                <td>
+                                    <label for="email">Email: </label>
+                                </td>
+                                <td>
+                                    <input formControlName="email" type="text" class="form-control">
+                                    <div *ngIf="!f.email.valid && f.email.touched" class="alert alert-danger">
+                                        <div [hidden]="!f.email.errors.email">Correo no valido</div>
+                                        <div [hidden]="!f.email.errors.required">No puede estar vacio</div>
+                                    </div>
+                                </td>        
+                            </tr>
+                            <tr class="form-group col-md-12">       
+                                <td>
+                                    <label for="password">Contraseña: </label>
+                                </td>
+                                <td>
+                                    <input formControlName="password" type="text" class="form-control">
+                                    <div *ngIf="!f.password.valid && f.password.touched" class="alert alert-danger">
+                                        <div [hidden]="f.password.errors.minLength">Contraseña mas de 5 caracteres</div>
+                                        <div [hidden]="!f.password.errors.required">No puede estar vacio</div>
+                                    </div>
+                                </td>                            
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                <td>    
+                                    <label for="confirmPassword">Repetir la contraseña: </label>
+                                </td>
+                                <td>
+                                    <input formControlName="confirmPassword" type="text" class="form-control">
+                                    <div *ngIf="!f.confirmPassword.valid && f.confirmPassword.touched" class="alert alert-danger">                           
+                                    <div [hidden]="!f.confirmPassword.errors.required">No puede estar vacio</div>
+                                    </div>
+                                </td>                                
+                            </tr>
+                            <tr class="form-group col-md-12">
+                                <td>    
+                                    <label for="active">Usuario Activo: </label>
+                                </td>
+                                <td>
+                                    <select formControlName="active" class="form-control" id="selActive">
+                                        <option >true</option>
+                                        <option >false</option>  
+                                    </select>
+                                </td>                                
+                            </tr>                        
+                        </form>
+                 
+                        
+                        <button type="submit" class="btn btn-primary"  [disabled]="!formEmployee.valid" [disabled]="!form.valid" (click)="PrepareDataUpdate()">Registrar Empleado</button>
+                    </td>
+  
+                    <!--aqui va el cuerpo de los datos de los permisos--> 
+                    <td>
+                        <tr *ngFor="let item of formPermissions.value.idPermission" >
+                            <td><i class="fas fa-check-circle"></i></td>
+                            <td>{{item.name}}</td>
+                        </tr>
+                        <tr></tr>
+                            
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary ml-auto" data-toggle="modal" data-target="#permissionModal">Actualizar Permisos
+                        </button>
+                                
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>   
+<!-----------------------------------------------fin formulario actualizacion usuario--------------------->
+
+<!-----------------------------------------------inicio Modal ---------------------------------------------->
+    <div class="modal fade" id="permissionModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+    aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <div class="modal-title title-styles-components" id="exampleModalLabel"><h4>Permisos Por Empleado</h4></div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <form [formGroup]="formPermissions">
+                    <div class="modal-body contentPermissions">
+                        <div>
+                            <div *ngFor="let item of allpermissions; let i = index">
+                                <input type="checkbox" [(ngModel)]="keysListCheckbox[i]" [ngModelOptions]="{standalone: true}" (change)="onChangeCheck(item.id, item.name, $event.target.checked)" />
+                                    {{ item.name }}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary" data-dismiss="modal">Listo!!</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<!-------------------------------fin actualizar datos de usuario--------------------------->
+  

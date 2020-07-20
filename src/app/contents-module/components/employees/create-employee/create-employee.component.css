@@ -1,0 +1,13 @@
+.content{
+    padding-left: 9%;/*permite centrar el formulario*/
+}
+.content-header{
+    justify-content:center;
+}
+.content-form{
+    padding:4%; 
+}
+.contentPermissions{
+    height: 10em;
+    overflow-y: scroll;
+}

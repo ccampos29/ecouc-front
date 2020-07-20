@@ -1,0 +1,17 @@
+.tableUser{
+    height: 30em;
+    overflow-y: scroll;
+}
+thead tr:nth-child(1) th{ 
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.btn{
+    padding: 0px;
+}
+.btn button{
+    font-size: 11px;
+    padding: 1px;
+    margin-left: 1px;
+}

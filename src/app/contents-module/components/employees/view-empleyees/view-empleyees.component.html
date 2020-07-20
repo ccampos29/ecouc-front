@@ -1,0 +1,24 @@
+<div><h1 class="title-styles-components">Ver Funcionarios</h1></div>
+<div class="table-responsive tableUser style-forms"><!--las dos ultimas clases pertenecen a estilos personalizados NO son de bootstrap4-->
+    <table class="table col-md-12" >
+        <thead class="thead-dark col-md-12">
+        <tr>
+            <th *ngFor="let item of ListUsers[0]| keyvalue">
+                {{item.key}}
+            </th> 
+            <th>Actualizar/Eliminar</th>
+        </tr>
+        </thead>
+        <tbody class="col-md-12" >
+            <tr *ngFor="let data of ListUsers" >
+                <td  *ngFor="let item of data | keyvalue">{{item.value}}</td>
+                <td><!--ultima columna la cual contiene los botones actualizar y eliminar en cada una de sus filas-->
+                    <div class="btn col-md-12" >
+                        <button class="btn btn-success col-md-5" (click)="DetailsSendFather(data.id)">Detalles</button>
+                        <button class="btn btn-warning  col-md-5" (click)="Deactivate(data.id)">Desactivar</button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>     

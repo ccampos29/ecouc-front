@@ -1,0 +1,194 @@
+<div><h1 class="title-styles-components">Crear Funcionario</h1></div>
+
+    <div class="style-forms col-md-12" >
+        <div class="header style-header-forms col-md-12" >
+            <div class="content-header col-md-12" >
+                <label for="inputAddress2">Formulario Registro Nuevo funcionario  </label> 
+            </div>
+        </div>
+        <div class="content-form col-md-12">
+            <!--inicio formulario usuario normal sin extension-->
+            <form [formGroup]="form" class="col-md-12 container-fluid">
+                <div class="form-row col-md-12" style="padding:0px"> 
+                    <div class="form-group col-md-3">
+                        <label for="username">Nombre de usuario: </label>
+                        <input formControlName="username" type="text" class="form-control">
+                        <div *ngIf="!f.username.valid && f.username.touched" class="alert alert-danger">
+                            
+                            <div [hidden]="f.username.errors.minLength">Nombre mas de 3 caracteres</div>
+                            <div [hidden]="!f.username.errors.required">No puede estar vacio</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="email">Email: </label>
+                        <input formControlName="email" type="text" class="form-control">
+                        <div *ngIf="!f.email.valid && f.email.touched" class="alert alert-danger">
+                            <div [hidden]="!f.email.errors.email">Correo no valido</div>
+                            <div [hidden]="!f.email.errors.required">No puede estar vacio</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="password">Contraseña: </label>
+                        <input formControlName="password" type="text" class="form-control">
+                        <div *ngIf="!f.password.valid && f.password.touched" class="alert alert-danger">
+                            <div [hidden]="f.password.errors.minLength">contraseña mas de 5 caracteres</div>
+                            <div [hidden]="!f.password.errors.required">No puede estar vacio</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="confirmPassword">Repetir contraseña: </label>
+                        <input formControlName="confirmPassword" type="text" class="form-control">
+                        <div *ngIf="!f.confirmPassword.valid && f.confirmPassword.touched" class="alert alert-danger">                           
+                           <div [hidden]="!f.confirmPassword.errors.required">No puede estar vacio</div>
+                        </div>
+                    </div> 
+                </div>
+            </form>
+            <!--fin formulario usuario basico normal-->
+            <!--inicio formulario extension de usuario empleado-->
+            <form [formGroup]="formEmployee" class="col-md-12 container-fluid">
+                <div class="form-row col-md-12" style="padding:0px"> 
+                    <div class="form-group col-md-3">
+                        <label for="documentNumber">Documento de Identidad: </label>
+                        <input formControlName="documentNumber" type="text" class="form-control">
+                        <div *ngIf="!fEmployee.documentNumber.valid && fEmployee.documentNumber.touched" class="alert alert-danger">
+                            
+                            <div [hidden]="fEmployee.documentNumber.errors.minLength">Mas de 8 numeros </div>
+                            <div [hidden]="!fEmployee.documentNumber.errors.required">No puede estar vacio</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="name">Nombre: </label>
+                        <input formControlName="name" type="text" class="form-control">
+                        <div *ngIf="!fEmployee.name.valid && fEmployee.name.touched" class="alert alert-danger">
+                            <div [hidden]="!fEmployee.name.errors.minLength">Mas de 3 Caracteres</div>
+                            <div [hidden]="!fEmployee.name.errors.required">No puede estar vacio</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="lastName">Apellido: </label>
+                        <input formControlName="lastName" type="text" class="form-control">
+                        <div *ngIf="!fEmployee.lastName.valid && fEmployee.lastName.touched" class="alert alert-danger">
+                            <div [hidden]="!fEmployee.lastName.errors.minLength">Mas de 3 Caracteres</div>
+                            <div [hidden]="!fEmployee.lastName.errors.required">No puede estar vacio</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label class="col-md-12" for="sex">Genero: </label>                       
+                        <label class="col-md-4" *ngFor="let item of listSex" >
+                            <input formControlName="sex" class="form-control" type="radio" [value]="item" name="sex" [id]="item" >
+                            {{item}}   
+                        </label>                       
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="birthYear">Fecha de Nacimiento: </label>
+                        <input formControlName="birthYear" type="text" class="form-control">
+                        <div *ngIf="!fEmployee.birthYear.valid && fEmployee.birthYear.touched" class="alert alert-danger">
+                            <div [hidden]="!fEmployee.birthYear.errors.required">No puede estar vacio</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="address">Direccion de Residencia: </label>
+                        <input formControlName="address" type="text" class="form-control">
+                        <div *ngIf="!fEmployee.address.valid && fEmployee.address.touched" class="alert alert-danger">
+                            <div [hidden]="fEmployee.address.errors.minLength">contraseña mas de 5 caracteres</div>
+                            <div [hidden]="!fEmployee.address.errors.required">No puede estar vacio</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="neighborhood">Barrio de Residencia: </label>
+                        <input formControlName="neighborhood" type="text" class="form-control">
+                        <div *ngIf="!fEmployee.neighborhood.valid && fEmployee.neighborhood.touched" class="alert alert-danger">                           
+                           <div [hidden]="!fEmployee.neighborhood.errors.required">No puede estar vacio</div>
+                           <div [hidden]="fEmployee.neighborhood.errors.minLength">Mas de 4 caracteres</div>
+                        </div>
+                    </div> 
+                    <div class="form-group col-md-3">
+                        <label for="phoneNumber">Numero de Telefono: </label>
+                        <input formControlName="phoneNumber" type="text" class="form-control">
+                        <div *ngIf="!fEmployee.phoneNumber.valid && fEmployee.phoneNumber.touched" class="alert alert-danger">
+                            <div [hidden]="fEmployee.phoneNumber.errors.minLength">Mas de 5 caracteres</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="celphoneNumber">Numero de Celular: </label>
+                        <input formControlName="celphoneNumber" type="text" class="form-control">
+                        <div *ngIf="!fEmployee.celphoneNumber.valid && fEmployee.celphoneNumber.touched" class="alert alert-danger">
+                            <div [hidden]="fEmployee.celphoneNumber.errors.minLength">Mas de 10 caracteres</div>
+                            <div [hidden]="!fEmployee.celphoneNumber.errors.required">No puede estar vacio</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="photo">Foto: </label>
+                        <input formControlName="photo" type="text" class="form-control">
+                        <div *ngIf="!fEmployee.photo.valid && fEmployee.photo.touched" class="alert alert-danger">
+                            <div [hidden]="fEmployee.photo.errors.minLength">Mas de 3 caracteres</div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="cityOfBirth">Ciudad de Nacimiento: </label>
+                        <select formControlName="cityOfBirth" class="form-control" id="cityOfBirth">
+                            <option *ngFor="let itemCityBirth of listCityOfBirth" >
+                                {{itemCityBirth}}
+                            </option>
+                        </select>
+                    </div> 
+                    <div class="form-group col-md-3">
+                        <label for="profession">Profesion: </label>
+                        <select formControlName="profession" class="form-control" id="profession">
+                            <option *ngFor="let itemProfession of listProfession" >
+                                {{itemProfession}}
+                            </option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-3">
+                        <label for="divisionPosition">Cargo de Division o Departamento: </label>
+                        <select formControlName="divisionPosition" class="form-control" id="divisionPosition">
+                            <option *ngFor="let itemDivisionPositions of divisionPositions" [value]="itemDivisionPositions.id">
+                                {{itemDivisionPositions.name}}
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </form>
+            <!--fin formulario extension de usuario empleado-->
+            <button type="submit" class="btn btn-primary"  [disabled]="!formEmployee.valid" [disabled]="!form.valid" (click)="PrepareData()">Registrar Empleado</button>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary ml-auto" data-toggle="modal" data-target="#permissionModal">
+                Adicionar Permisos
+            </button>
+        </div>    
+    </div>
+ 
+  <!-- Modal -->
+  <div class="modal fade" id="permissionModal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <div class="modal-title title-styles-components" id="exampleModalLabel"><h4>Permisos Por Empleado</h4></div>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <form [formGroup]="formPermissions">
+            <div class="modal-body contentPermissions">
+                <div>
+                    <div *ngFor="let item of permissions; let i = index">
+                        <input type="checkbox" [(ngModel)]="keysCheckbox[i]" [ngModelOptions]="{standalone: true}" (change)="onChange(item.id, $event.target.checked)" />
+                            {{ item.name }}
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" data-dismiss="modal">Listo!!</button>
+            </div>
+        </form>
+ 
+      </div>
+    </div>
+  </div>
+        
+

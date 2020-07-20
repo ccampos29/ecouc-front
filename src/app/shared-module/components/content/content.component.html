@@ -1,0 +1,24 @@
+
+<ng-container *ngIf="this.Component === 'defaultComponent'; else createEmployee">
+  <app-default-component></app-default-component>
+</ng-container>
+
+  <ng-template #createEmployee>
+      <ng-container *ngIf="this.Component ==='createEmployee'; else viewUser">
+        <app-create-employee ></app-create-employee>
+      </ng-container>
+  </ng-template>
+
+<ng-template #viewUser>
+  <ng-container *ngIf="this.Component ==='viewUsers'; else detailsEmployee">
+    <app-view-empleyees 
+    (ChildDetails)="MessageChildViewAllUser($event)"><!--childDetails esta declarada en viewEmployeesComponent y es la que hace referencia al valor que se envia al padre que contiene el metodo MessageChildViewAllUser(enviandole el evento con el dato) al padre -->
+    </app-view-empleyees>
+  </ng-container>
+</ng-template>
+
+<ng-template #detailsEmployee>
+  <ng-container *ngIf="this.Component ==='detailsUserComponent'; else detailsEmployee">
+   <app-details-user [ParamChildDetailsUser]="this.MsgChildViewAllUser"></app-details-user><!--se envia la el contenido que se acaba de modificar en el padre que a su vez fue enviada por el hijo viewEmployeesComponent-->
+  </ng-container>
+</ng-template>

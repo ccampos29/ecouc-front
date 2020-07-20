@@ -1,0 +1,177 @@
+<!--navbar header-->
+<app-navbar-header></app-navbar-header>
+<!--end navbar header-->
+
+<div class="page-wrapper chiller-theme toggled">
+ 
+    <a id="show-sidebar" class="btn btn-sm btn-dark" href="#" onclick="return false">
+      <i class="fas fa-bars"></i>
+    </a>
+    <nav id="sidebar" class="sidebar-wrapper">
+      <div class="sidebar-content">
+        <div class="sidebar-brand">
+          <a href="#" onclick="return false" (click)="changeContent('updateEmployee')">INICIO</a>
+          <div id="close-sidebar">
+            <i class="fas fa-times"></i>
+          </div>
+        </div>
+        <!--sidebar user-->
+        <app-sidebar-user></app-sidebar-user>
+        <!--end sidebar user-->
+
+        <!-- sidebar-menu -->
+        <!--contenido despues del usuario, menu principal lateral el cuerpo del menu se puso aca porque para que funciones el menu con el contenido se hace uso de @viewChild y este necesita que lo habra el componente padre y sirve entre hermanos-->
+        <div class="sidebar-menu">
+          <ul>
+            <li class="header-menu">
+              <span>Acciones Internas</span>
+            </li>
+
+            <li class="sidebar-dropdown">
+              <a href="#" onclick="return false">
+                <i class="fa fa-tachometer-alt"></i>
+                <span>Empleados</span>
+                <span class="badge badge-pill badge-warning">New</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#" onclick="return false" (click)="changeContent('createEmployee')">Nuevo Empleado
+                      <span class="badge badge-pill badge-success">Pro</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="return false" (click)="changeContent('viewUsers')">Visualizar Empleados
+                      </a>
+                  </li>           
+                </ul>
+              </div>
+            </li>
+
+            <li class="sidebar-dropdown">
+              <a href="#" onclick="return false">
+                <i class="fa fa-shopping-cart"></i>
+                <span>E-commerce</span>
+                <span class="badge badge-pill badge-danger">3</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#" onclick="return false">Products
+
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="return false">Orders</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="return false">Credit cart</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#" onclick="return false">
+                <i class="far fa-gem"></i>
+                <span>Components</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#" onclick="return false">General</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="return false">Panels</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="return false">Tables</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="return false">Icons</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="return false">Forms</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#" onclick="return false">
+                <i class="fa fa-chart-line"></i>
+                <span>Charts</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#" onclick="return false">Pie chart</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="return false">Line chart</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="return false">Bar chart</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="return false">Histogram</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="sidebar-dropdown">
+              <a href="#" onclick="return false">
+                <i class="fa fa-globe"></i>
+                <span>Maps</span>
+              </a>
+              <div class="sidebar-submenu">
+                <ul>
+                  <li>
+                    <a href="#" onclick="return false">Google maps</a>
+                  </li>
+                  <li>
+                    <a href="#" onclick="return false">Open street map</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="header-menu">
+              <span>Extra</span>
+            </li>
+            <li>
+              <a href="#" onclick="return false">
+                <i class="fa fa-book"></i>
+                <span>Documentation</span>
+                <span class="badge badge-pill badge-primary">Beta</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="return false">
+                <i class="fa fa-calendar"></i>
+                <span>Calendar</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" onclick="return false">
+                <i class="fa fa-folder"></i>
+                <span>Examples</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--end sidebar-menu  -->
+      </div>
+      <!-- sidebar-footer  -->
+      <app-sidebar-footer></app-sidebar-footer>
+    </nav>
+    <!-- sidebar-wrapper  -->
+    <main class="page-content">
+      <div class="container-fluid">
+       <!--content-->
+       <app-content></app-content>
+       <!--end content-->
+      </div>
+    </main>
+    <!-- page-content" -->
+  </div>
+  <!-- page-wrapper -->
+      
+

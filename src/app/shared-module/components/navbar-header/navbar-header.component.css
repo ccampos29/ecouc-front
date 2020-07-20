@@ -1,0 +1,10 @@
+
+/*barra cabezera*/
+
+.nav-principal{
+    position: fixed !important;
+    z-index: 990 ;
+    width: 100%;
+    height: 3.5em;
+    background: #ffffff !important;
+  }
