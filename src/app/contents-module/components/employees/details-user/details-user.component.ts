@@ -107,9 +107,9 @@ export class DetailsUserComponent implements OnInit {
       divisionPosition: new FormControl(user.divisionPosition.id, [Validators.required, Validators.minLength(3)]),
       netSalary: new FormControl(user.netSalary, [Validators.required, Validators.minLength(3)]),
       contractModality: new FormControl(user.contractModality, [Validators.required, Validators.minLength(3)]),
-      socialSegurity: new FormControl(user.socialSegurity.name, [Validators.required, Validators.minLength(3)]),
-      profesionalRisks: new FormControl(user.profesionalRisks.name, [Validators.required, Validators.minLength(3)]),
-      pension: new FormControl(user.pension.name, [Validators.required, Validators.minLength(3)]),
+      socialSegurity: new FormControl(user.socialSegurity.id, [Validators.required, Validators.minLength(3)]),
+      profesionalRisks: new FormControl(user.profesionalRisks.id, [Validators.required, Validators.minLength(3)]),
+      pension: new FormControl(user.pension.id, [Validators.required, Validators.minLength(3)]),
     });
   }
 // metodo inicial para actualizar datos usuario
