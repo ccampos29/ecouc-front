@@ -83,14 +83,14 @@ export class CreateEmployeeComponent implements OnInit {
       sex: new FormControl('', [Validators.required]),
       birthYear: new FormControl('', [Validators.required]),
       address: new FormControl('', [Validators.required, Validators.minLength(5)]),
-      neighborhood: new FormControl('', [Validators.required, Validators.minLength(4)]),
+      neighborhood: new FormControl(''),
       phoneNumber: new FormControl('', [Validators.minLength(5)]), // validar que sea numerico
       celphoneNumber: new FormControl('', [Validators.required, Validators.minLength(10)]), // validar que sea numerico
       // hiringDate: new FormControl('', [Validators.required, Validators.minLength(6)]), // fecha de contratacion
       photo: new FormControl('', [Validators.minLength(3)]),
-      cityOfBirth: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      profession: new FormControl('', [Validators.required, Validators.minLength(3)]),
-      divisionPosition: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      cityOfBirth: new FormControl(''),
+      profession: new FormControl(''),
+      divisionPosition: new FormControl(''),
       /*netSalary: new FormControl('', [Validators.required, Validators.minLength(3)]),
       contractModality: new FormControl('', [Validators.required, Validators.minLength(5)]),
       socialSegurity: new FormControl('', [Validators.required, Validators.minLength(5)]),

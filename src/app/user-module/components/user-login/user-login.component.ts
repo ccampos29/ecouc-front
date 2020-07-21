@@ -27,7 +27,7 @@ export class UserLoginComponent implements OnInit {
 
     this.serviceLoginService.Login(form).subscribe( // llama al metodo en la clase service-login y metodo login
       data => {
-        console.log(data);
+        //console.log("kasfjñlsdfa",data);
         this.EnterCredentialsInStorage(data)
         .then(
           (data) => {

@@ -97,19 +97,19 @@ export class DetailsUserComponent implements OnInit {
       sex: new FormControl(user.sex, [Validators.required]),
       birthYear: new FormControl(user.birthYear, [Validators.required]),
       address: new FormControl(user.address, [Validators.required, Validators.minLength(5)]),
-      neighborhood: new FormControl(user.neighborhood, [Validators.required, Validators.minLength(4)]),
+      neighborhood: new FormControl(user.neighborhood),
       phoneNumber: new FormControl(user.phoneNumber, [Validators.minLength(5)]), // validar que sea numerico
       celphoneNumber: new FormControl(user.celphoneNumber, [Validators.required, Validators.minLength(10)]), // validar que sea numerico
       hiringDate: new FormControl(user.hiringDate, [Validators.required, Validators.minLength(3)]), // fecha de contratacion
       photo: new FormControl(user.photo, [Validators.minLength(3)]),
-      cityOfBirth: new FormControl(user.cityOfBirth, [Validators.required, Validators.minLength(4)]),
-      profession: new FormControl(user.profession, [Validators.required, Validators.minLength(3)]),
-      divisionPosition: new FormControl(user.divisionPosition.id, [Validators.required, Validators.minLength(3)]),
+      cityOfBirth: new FormControl(user.cityOfBirth),
+      profession: new FormControl(user.profession),
+      divisionPosition: new FormControl(user.divisionPosition.id),
       netSalary: new FormControl(user.netSalary, [Validators.required, Validators.minLength(3)]),
-      contractModality: new FormControl(user.contractModality, [Validators.required, Validators.minLength(3)]),
-      socialSegurity: new FormControl(user.socialSegurity.name, [Validators.required, Validators.minLength(3)]),
-      profesionalRisks: new FormControl(user.profesionalRisks.name, [Validators.required, Validators.minLength(3)]),
-      pension: new FormControl(user.pension.name, [Validators.required, Validators.minLength(3)]),
+      contractModality: new FormControl(user.contractModality),
+      socialSegurity: new FormControl(user.socialSegurity.id),
+      profesionalRisks: new FormControl(user.profesionalRisks.id),
+      pension: new FormControl(user.pension.id),
     });
   }
 // metodo inicial para actualizar datos usuario

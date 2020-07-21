@@ -3,10 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-//const URL_USER = 'http://127.0.0.1:1337/User'; 
-const URL_USER = 'http://b4ea2278472f.ngrok.io/User';
-//const URL_EXTEND_USER_EMPLOYEE = 'http://127.0.0.1:1337/ExtendsUserEmployee';
-const URL_EXTEND_USER_EMPLOYEE = 'http://b4ea2278472f.ngrok.io/ExtendsUserEmployee';
+const URL_USER = 'http://127.0.0.1:1337/User'; 
+const URL_EXTEND_USER_EMPLOYEE = 'http://127.0.0.1:1337/ExtendsUserEmployee';
 
 @Injectable({
   providedIn: 'root'
