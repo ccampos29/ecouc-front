@@ -106,10 +106,17 @@ export class DetailsUserComponent implements OnInit {
       profession: new FormControl(user.profession),
       divisionPosition: new FormControl(user.divisionPosition.id),
       netSalary: new FormControl(user.netSalary, [Validators.required, Validators.minLength(3)]),
+<<<<<<< HEAD
       contractModality: new FormControl(user.contractModality),
       socialSegurity: new FormControl(user.socialSegurity.id),
       profesionalRisks: new FormControl(user.profesionalRisks.id),
       pension: new FormControl(user.pension.id),
+=======
+      contractModality: new FormControl(user.contractModality, [Validators.required, Validators.minLength(3)]),
+      socialSegurity: new FormControl(user.socialSegurity.id, [Validators.required, Validators.minLength(3)]),
+      profesionalRisks: new FormControl(user.profesionalRisks.id, [Validators.required, Validators.minLength(3)]),
+      pension: new FormControl(user.pension.id, [Validators.required, Validators.minLength(3)]),
+>>>>>>> deivis
     });
   }
 // metodo inicial para actualizar datos usuario
