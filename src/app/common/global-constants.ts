@@ -1,8 +1,12 @@
 import { ResolveEnd } from '@angular/router';
 
 export class GlobalConstants {
-
-   /* public static apiURL: string = "https://itsolutionstuff.com/";
+    public static URL_USER = 'http://127.0.0.1:1337/User'; 
+    public static URL_EXTEND_USER_EMPLOYEE = 'http://127.0.0.1:1337/ExtendsUserEmployee';
+    public static URL_PROGRAMACION_USUARIO = 'http://127.0.0.1:1337/Programacion';
+    public static URL_FACULTAD_POR_SEDE = 'http://127.0.0.1:1337/FacultadXsede';
+    public static URL_CHARTS = 'http://127.0.0.1:1337/RegistroDiario';
+    /* public static apiURL: string = "https://itsolutionstuff.com/";
     public static siteTitle: string = "This is example of ItSolutionStuff.com";*/
     public static CityOfBirth = [ // ciudad de nacimiento
         'bogota',

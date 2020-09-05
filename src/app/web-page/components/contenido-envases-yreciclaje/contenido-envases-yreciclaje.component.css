@@ -1,0 +1,10 @@
+.scrollFlotante{
+    display:scroll;
+    position:fixed;
+    bottom:15px;
+    right:0px;
+    margin-left: -49%;
+}
+.videoReciclaje{
+    margin-left: 10%;
+}

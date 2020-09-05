@@ -1,0 +1,23 @@
+<div><h1 class="title-styles-components">Cantidad de recogidas totales por empleado del servicio </h1></div>
+
+<div class="container ">
+    <div class="row">
+        <div class="charts chart-wrapper" >
+            <canvas baseChart 
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [plugins]="barChartPlugins"
+                [legend]="barChartLegend"
+                [chartType]="barChartType">
+            </canvas>
+        </div>
+    </div>
+    <div class="charts chart-wrapper"  >
+        <canvas baseChart 
+        [data]="doughnutChartData"
+        [labels]="doughnutChartLabels"
+        [chartType]="doughnutChartType">
+      </canvas>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+<div><h1 class="title-styles-components">Cantidad de recogidas totales por empleado del servicio </h1></div>
+
+
+<div class="style-forms col-md-12" >
+    <div class="header style-header-forms col-md-12" >
+        <div class="content-header col-md-12" >
+            <label for="inputAddress2">Formulario cantidad recogidas por empleado en los ultimos 6 dias  </label> 
+        </div>
+    </div>
+    <div class="content-form col-md-12">
+        <!--inicio formulario usuario normal sin extension-->
+        <form [formGroup]="formUser" class="col-md-12 container-fluid">
+            <div class="form-row col-md-12" style="padding:0px"> 
+                <div class="form-group col-md-3">
+                    <label for="user">Usuario: </label>
+                    <select formControlName="user" class="form-control" id="user">
+                        <option *ngFor="let itemuser of listaUsuarios" [value]="itemuser.id">
+                            {{itemuser.userName}}
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary"  [disabled]="!formUser.valid" (click)="searchHeadquarters()">Registrar Empleado</button>
+        </form>
+
+
+       
+    <div style="padding-bottom:20px;"></div>
+</div>
+
+<div class="container" > 
+    <div class="row">
+        <div class="chart chart-wrapper" >
+            <canvas baseChart 
+                [datasets]="barChartData"
+                [labels]="barChartLabels"
+                [options]="barChartOptions"
+                [plugins]="barChartPlugins"
+                [legend]="barChartLegend"
+                [chartType]="barChartType">
+            </canvas>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,579 @@
+    <!-- ***** Preloader Start ***** -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <!-- ***** Preloader End ***** -->
+    
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        
+                            <a href="index.html" class="logo">
+                                <img src="../../../../assets/images/logoudecaldas.PNG" class="envasesYreciclajeStyle" style="width:85px; height:60px;" alt="Cinque Terre"> 
+
+                                .ECOUC
+                            </a>
+                        
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <!--el scroll-to-section es una clase que permite dirigir el scroll por medio del href al id de la etiqueta respectiva-->
+                            <li class="scroll-to-section"><a href="#carouselExampleIndicators" class="active">Inicio</a></li>
+                            <li class="scroll-to-section"><a href="#about">Nosotros</a></li>
+                            <li class="scroll-to-section"><a href="#disposicionesLegales">Legal</a></li>
+                            <li class="scroll-to-section"><a href="#videoJuego">Juego</a></li>
+                            <li class="scroll-to-section"><a href="#projects">Proyectos</a></li>
+                            <!--<li class="submenu">
+                                <a href="javascript:;">Drop Down</a>
+                                <ul>
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">Features</a></li>
+                                    <li><a href="">FAQ's</a></li>
+                                    <li><a href="">Blog</a></li>
+                                </ul>
+                            </li>-->
+                            <li class="scroll-to-section"><a href="#testimonials">Procesos</a></li>
+                            <li class="scroll-to-section"><a href="#contact-us">Contacto</a></li>
+                            <li class="scroll-to-section"><a [routerLink]="['/login']">Funcionarios</a></li>
+                            
+                          <!--<div class="search-icon">
+                                <a href="#search"><i class="fa fa-search"></i></a>
+                            </div>-->
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+    
+    <!-- ***** Search Area ***** -->
+    <!--<div id="search">
+        <button type="button" class="close">×</button>
+        <form id="contact" action="#" method="get">
+            <fieldset>
+                <input type="search" name="q" placeholder="SEARCH KEYWORD(s)" aria-label="Search through site content">
+            </fieldset>
+            <fieldset>
+                <button type="submit" class="main-button">Buscar</button>
+            </fieldset>
+        </form>
+    </div>-->
+
+    <!--********carousel section*************-->
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="../../../../assets/images/banner2.jpg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h3 class="carousel-captionh3">Notas de Importancia</h3>
+                <h1 class="carousel-captionh1">Colombia recicla el 17% de las 12 millones de toneladas de residuos</h1>
+                <div style="padding-bottom: 50px;"></div>
+                <a [routerLink]="['/contenidoGeneral',{id:'reciclajeEnColombia'}]" class="main-stroked-button">Conocer Mas!!</a>
+                <div style="padding-bottom: 50px;"></div>       
+            </div>
+        </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../../../../assets/images/banner1.jpg" alt="Second slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h3 class="carousel-captionh3">Notas de Importancia</h3>
+                <h1 class="carousel-captionh1">Contaminación de mares y ríos por plásticos es alarmante en Colombia</h1>
+                <div style="padding-bottom: 50px;"></div>
+                <a [routerLink]="['/contenidoGeneral',{id:'contaminacionMarinaEnColombia'}]" class="main-stroked-button">Conocer Mas!!</a>
+                <div style="padding-bottom: 50px;"></div>
+            </div>
+        </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="../../../../assets/images/banner3.png" alt="Third slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h3 class="carousel-captionh3">Notas de Importancia</h3>
+                <h1 class="carousel-captionh1">Toneladas de basura espacial, ¿que se esta haciendo?</h1>
+                <div style="padding-bottom: 50px;"></div>
+                <a [routerLink]="['/contenidoGeneral',{id:'basuraEspacial'}]" class="main-stroked-button">Conocer Mas!!</a>
+                <div style="padding-bottom: 50px;"></div>
+              </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+
+
+
+    <!-- ***** Main Banner Area End ***** -->
+
+    <!-- ***** About Area Starts ***** -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>Acerca de Nosotros: Universidad de Caldas</h6>
+                            <h2>Propósitos del plan de acción 2019-2022</h2>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <img src="../../../../assets/images/service-item-01.png" alt="">
+                                    <p>Gestionar un portafolio integrado de productos y servicios con proyección de impacto pertinente al medio y a la sociedad</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <img src="../../../../assets/images/service-item-01.png" alt="">
+                                    <P>Generar procesos de comunicación institucional para una relación efectiva y responsable con la comunidad y la sociedad</P>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <img src="../../../../assets/images/contact-info-03.png" alt="">
+                                    <P>Mejorar la relación egresado universidad y universidad empresa para la empleabilidad y la inserción laboral</P>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6">
+                                <div class="service-item">
+                                    <img src="../../../../assets/images/contact-info-03.png" alt="">
+                                    <P>Salud, Medio ambiente y recursos naturales</P>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="right-text-content">
+                        <br><br><p>Desde 2012, la Universidad de Caldas comprometida con el medio ambiente, viene 
+                        transformando los desperdicios y desechos a través de procesos biotecnológicos en productos y 
+                        subproductos para la industria farmacéutica, ambiental y alimenticia por medio del Centro de 
+                        Investigación y Desarrollo conocido como Planta de Bioprocesos y Agroindustria.
+                    </p>
+                        <div class="col-md-12">
+                            <a [routerLink]="['/contenidoGeneral', {id:'quienesSomos'}]" class="main-button-icon">
+                                Aprende Mas!! <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** About Area Ends ***** -->
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section" id="disposicionesLegales">
+        <div class="container">
+            <br/>
+            <br/>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter bottom move 30px over 0.6s after 0.4s">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 features-item">
+                        <div class="">
+                            <h4>Gobierno unifica el código de colores:</h4>
+                            <p>El Ministerio de Ambiente y Desarrollo Sostenible, en conjunto con el Ministerio de Vivienda, 
+                                Ciudad y Territorio, mediante Resolución, establecieron un código de colores unificado para 
+                                la separación de residuos en la fuente.</p>
+                            <a [routerLink]="['/contenidoGeneral', {id:'unificacionCodigoColoresGobierno'}]" class="text-button-icon">
+                                Leer mas!! <i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="targetasStyle col-lg-4 col-md-6 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
+                    <div class="features-item">
+                        <div class="">
+                            <h4>Resolucion ministerio de ambiente y desarrollo sostenible</h4>
+                            <p>El Ministro de Ambiente y Desarrollo Sostenible, en ejercicio 
+                            de sus funciones legales en especial las establecidas en los numerales 
+                            10 y 14 del artículo 5° de la Ley 99 de 1993 y en desarrollo de lo dispuesto 
+                            en la Ley 1753 de 2015 -Plan Nacional de Desarrollo 2014-2018 ...</p>
+                            <a href="https://www.minambiente.gov.co/images/normativa/app/resoluciones/fe-res%201561%20de%202019.pdf" class="text-button-icon">
+                                Ir al documento Original<i class="fa fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12" >
+                    <div class="col-lg-12 col-md-12 col-xs-12">
+                        <img class="col-lg-12 col-md-12 col-xs-12" src="../../../../assets/images/160428_02_RegulacionUsoBolsasPlasticas_1800.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <br/>
+        </div>
+    </section>
+
+    <!-- ***** Features Big Item End ***** -->
+
+    <!-- ***** Features Big Item Start ***** -->
+    <section class="section" id="videoJuego">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <div class="section-heading">
+                        <h6>Subscribe Newsletters</h6>
+                        <h2>Don’t miss this chance!</h2>
+                    </div>
+                    <div class="subscribe-content">
+                        <p>Vivamus suscipit blandit nibh, in cursus mi. Proin vel blandit metus, et auctor elit. Vivamus tincidunt tristique convallis. Ut nec odio vel arcu euismod semper nec ac sem.</p>
+                        <div class="subscribe-form">
+                            <form id="subscribe-now" action="" method="get">
+                                <div class="row">
+                                    <div class="col-md-8 col-sm-12">
+                                      <fieldset>
+                                        <input name="email" type="text" id="email" placeholder="Enter your email..." required="">
+                                      </fieldset>
+                                    </div>
+                                    <div class="col-md-4 col-sm-12">
+                                      <fieldset>
+                                        <button type="submit" id="form-submit" class="main-button">Subscribe Now</button>
+                                      </fieldset>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Features Big Item End ***** -->
+
+
+    <!-- ***** Projects Area Starts ***** -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-3">
+                <div class="section-heading">
+                    <h6>Proyectos productivos</h6>
+                    <h2>Proyectos productivos mas sobresalientes </h2>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="targetasStyle col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+                        <div class="card">
+                            <img class="card-img-top" src="../../../../assets/images/plasticoLadrillos.PNG" style="height: 130px;" alt="Card image">
+                            <div class="card-body">
+                            <h5 class="card-title">ECOMODULARES</h5>
+                            <p class="card-text">Transformacion de material, plastico reciclado.</p>
+                            <a href="#" data-toggle="modal" data-target="#myModal1" class="btn btn-success">Ver mas!!</a>
+                            </div>
+                    </div>
+                    </div>
+                    <div class="targetasStyle col-lg-4 col-md-4 col-sm-6 col-xs-12 ">  
+                        <div class="card">
+                            <img class="card-img-top" src="../../../../assets/images/plasticoMuebles.PNG" style="height: 130px;" alt="Card image">
+                            <div class="card-body">
+                            <h5 class="card-title">DIY Recycled Plastic</h5>
+                            <p class="card-text">Mueble hecho de plastico reciclado</p>
+                            <a href="#" data-toggle="modal" data-target="#myModal2" class="btn btn-success">Ver mas!!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="targetasStyle col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+                        <div class="card">
+                            <img class="card-img-top" src="../../../../assets/images/postesPlasticos.PNG" style="height: 130px;" alt="Card image">
+                            <div class="card-body">
+                            <h5 class="card-title">Alvaro Polanco</h5>
+                            <p class="card-text">Postes y tablas para cercado y manipulacion en el campo</p>
+                            <a href="#" data-toggle="modal" data-target="#myModal3" class="btn btn-success">Ver mas!!</a>
+                            </div>
+                    </div>
+                    </div>
+                    <div class="targetasStyle col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+                        <div class="card">
+                            <img class="card-img-top" src="../../../../assets/images/10proyectoosproductivos.PNG" style="height: 130px;" alt="Card image">
+                            <div class="card-body">
+                            <h5 class="card-title"> NegocioStart</h5>
+                            <p class="card-text">10 ideas de negocios rentables de reciclaje</p>
+                            <a href="#" data-toggle="modal" data-target="#myModal4" class="btn btn-success">Ver mas!!</a>
+                            </div>
+                    </div>
+                    </div>
+                    <div class="targetasStyle col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+                        <div class="card">
+                            <img class="card-img-top" src="../../../../assets/images/empresareciclaje.PNG" style="height: 130px;" alt="Card image">
+                            <div class="card-body">
+                            <h5 class="card-title">Empresa reciclaje</h5>
+                            <p class="card-text">Emprendedores ejemplo empresa reciclaje</p>
+                            <a href="#" data-toggle="modal" data-target="#myModal5" class="btn btn-success">Ver mas!!</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="targetasStyle col-lg-4 col-md-4 col-sm-6 col-xs-12 ">
+                        <div class="card">
+                            <img class="card-img-top" src="../../../../assets/images/emprendimientollantas.PNG" style="height: 130px;" alt="Card image">
+                            <div class="card-body">
+                            <h5 class="card-title">Económica</h5>
+                            <p class="card-text">pequeña línea de reciclaje de neumatico,llanta.</p>
+                            <a href="#" data-toggle="modal" data-target="#myModal6" class="btn btn-success">Ver mas!!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal 1 -->
+    <div class="modal fade col-lg-12 col-md-12 col-sm-12 col-xs-12" id="myModal1" >
+        <div class="modal-dialog modal-lg" >
+            <div class="modal-content col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                <!-- Modal Header -->
+                <div class="modal-header col-lg-12 col-md-12 col-sm-12 col-xs-12"> <b>.ECOMODULARES</b></div>
+                <!-- Modal body -->
+                <div class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <iframe id="video1" class="videoProyectos col-lg-12 col-md-12 col-sm-12 col-xs-12 " src="https://www.youtube.com/embed/GIqerEjpQjk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!-- Modal footer en el boton le envio el nombre del id del iframe-->
+                <div class="modal-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="destruir('#video1')">Cerrar</button>
+                </div>
+            </div>
+        </div>
+  </div>
+      <!-- Modal 2 -->
+      <div class="modal fade col-lg-12 col-md-12 col-sm-12 col-xs-12" id="myModal2" >
+        <div class="modal-dialog modal-lg" >
+            <div class="modal-content col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                <!-- Modal Header -->
+                <div class="modal-header col-lg-12 col-md-12 col-sm-12 col-xs-12"><b>DIY Recycled Plastic</b></div>
+                <!-- Modal body -->
+                <div class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <iframe id="video2" class="videoProyectos col-lg-12 col-md-12 col-sm-12 col-xs-12 " src="https://www.youtube.com/embed/LL3gh-WrTew" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="destruir('#video2')">Cerrar</button>
+                </div>
+            </div>
+        </div>
+  </div>
+      <!-- Modal 3 -->
+      <div class="modal fade col-lg-12 col-md-12 col-sm-12 col-xs-12" id="myModal3" >
+        <div class="modal-dialog modal-lg" >
+            <div class="modal-content col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                <!-- Modal Header -->
+                <div class="modal-header col-lg-12 col-md-12 col-sm-12 col-xs-12"><b>Alvaro Polanco</b></div>
+                <!-- Modal body -->
+                <div class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <iframe id="video3" class="videoProyectos col-lg-12 col-md-12 col-sm-12 col-xs-12 " src="https://www.youtube.com/embed/qF9za2zNijc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="destruir('#video3')">Cerrar</button>
+                </div>
+            </div>
+        </div>
+  </div>
+      <!-- Modal 4 -->
+      <div class="modal fade col-lg-12 col-md-12 col-sm-12 col-xs-12" id="myModal4" >
+        <div class="modal-dialog modal-lg" >
+            <div class="modal-content col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                <!-- Modal Header -->
+                <div class="modal-header col-lg-12 col-md-12 col-sm-12 col-xs-12"><b>NegocioStart</b></div>
+                <!-- Modal body -->
+                <div class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <iframe id="video4" class="videoProyectos col-lg-12 col-md-12 col-sm-12 col-xs-12 " src="https://www.youtube.com/embed/uhOEhEkJ5jI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="destruir('#video4')">Cerrar</button>
+                </div>
+            </div>
+        </div>
+  </div>
+      <!-- Modal 5 -->
+      <div class="modal fade col-lg-12 col-md-12 col-sm-12 col-xs-12" id="myModal5" >
+        <div class="modal-dialog modal-lg" >
+            <div class="modal-content col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                <!-- Modal Header -->
+                <div class="modal-header col-lg-12 col-md-12 col-sm-12 col-xs-12"><b>Empresa reciclaje</b></div>
+                <!-- Modal body -->
+                <div class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <iframe id="video5" class="videoProyectos col-lg-12 col-md-12 col-sm-12 col-xs-12 " src="https://www.youtube.com/embed/Cnsd74w1FTo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="destruir('#video5')">Cerrar</button>
+                </div>
+            </div>
+        </div>
+  </div>
+      <!-- Modal 6 -->
+    <div class="modal fade col-lg-12 col-md-12 col-sm-12 col-xs-12" id="myModal6" >
+            <div class="modal-dialog modal-lg" >
+                <div class="modal-content col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+                    <!-- Modal Header -->
+                    <div class="modal-header col-lg-12 col-md-12 col-sm-12 col-xs-12"><b>Económica</b></div>
+                    <!-- Modal body -->
+                    <div class="modal-body col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <iframe id="video6" class="videoProyectos col-lg-12 col-md-12 col-sm-12 col-xs-12 " src="https://www.youtube.com/embed/M9Vac02O40g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="destruir('#video6')">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+      </div>
+    
+    <!-- ***** Projects Area Ends ***** -->
+
+    <!-- ***** Testimonials Starts ***** -->
+    <section class="section" id="testimonials">
+        <div class="container">
+            <div class="row col-lg-12" >
+                <div class="col-lg-12">
+                    <div class="section-heading">
+                        <h6>Procesos</h6>
+                        <h2>Informacion Envases y su Reciclaje</h2>
+                    </div>
+                </div>
+                    <div class="imagen col-lg-4" >
+                        <a class="imagen" [routerLink]="['/envacesReciclaje', {id:'procesoReciclaje'}]">
+                            <img src="../../../../assets/images/proceso_rediclaje.jpg"  class="envasesYreciclajeStyle rounded-circle" alt="Cinque Terre"> 
+                        </a>
+                        <h4 class="section-heading">Proceso del Reciclaje</h4 >
+                    </div>
+                    <div class="imagen col-lg-4" >
+                        <a class="imagen" [routerLink]="['/envacesReciclaje', {id:'comoReciclar'}]" >
+                            <img src="../../../../assets/images/Reciclar.jpg" class="envasesYreciclajeStyle rounded-circle" alt="Cinque Terre"> 
+                        </a>
+                        <h4 class="section-heading">Como Reciclar</h4 >
+                    </div>  
+                    <div class="imagen col-lg-4" >
+                        <a class="imagen" [routerLink]="['/envacesReciclaje', {id:'dudas'}]" >
+                            <img src="../../../../assets/images/dudas.jpg" class="envasesYreciclajeStyle rounded-circle" alt="Cinque Terre"> 
+                        </a>
+                        <h4 class="section-heading">Dudas</h4 >
+                    </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Testimonials Ends ***** -->
+    
+    <!-- ***** Contact Us Area Starts ***** -->
+    <section class="section" id="contact-us">
+        <div class="container">
+            <div class="row">
+                <div class="targetasStyle col-lg-4 col-md-4 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>Contactenos</h6>
+                            <h2>Te gustaria contactarte con nosotros??</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="targetasStyle col-lg-4 col-md-4 col-xs-12">
+                    <div class="left-text-content">
+                        <ul class="contact-info">
+                            <li><img src="../../../../assets/images/contact-info-01.png" alt="">(6) 8781500</li>
+                            <li><img src="../../../../assets/images/contact-info-02.png" alt="">atencionalciudadano@ucaldas.edu.co</li>
+                            <li><a href="https://www.ucaldas.edu.co/portal/"><img src="../../../../assets/images/contact-info-03.png" alt="">https://www.ucaldas.edu.co</a></li>
+                            <li><img src="../../../../assets/images/contact-info-02.png" alt="">Cl. 65 #26-10, Manizales, Caldas</li>
+                        </ul>
+                    </div>
+                </div>
+                <!--<div class="col-lg-8 col-md-8 col-xs-12">
+                    <div class="contact-form">
+                        <form id="contact" action="" method="get">
+                          <div class="row">
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                <input name="name" type="text" id="name" placeholder="Your Name *" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                <input name="phone" type="text" id="phone" placeholder="Your Phone" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                <input name="email" type="email" id="email" placeholder="Your Email *" required="">
+                              </fieldset>
+                            </div>
+                            <div class="col-md-6 col-sm-12">
+                              <fieldset>
+                                <input name="subject" type="text" id="subject" placeholder="Subject">
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                              </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                              <fieldset>
+                                <button type="submit" id="form-submit" class="main-button-icon">Send Message Now <i class="fa fa-arrow-right"></i></button>
+                              </fieldset>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>-->
+            </div>
+        </div>
+    </section>
+    <!--****************corre el scroll hasta la etiqueta que contenga el id indicado en el href******************-->
+    <div class="scrollFlotante scroll-down scroll-to-section"><a href="#carouselExampleIndicators"><i class="fa fa-arrow-down"></i></a></div>
+
+    <!-- ***** Contact Us Area Ends ***** -->
+    
+    <!-- ***** Footer Start ***** -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-xs-12">
+                    <div class="left-text-content">
+                        <p>Copyright &copy; 2020, Universidad de Caldas, Manizales Caldas. </p>
+                        
+                       <p>Design: <a rel="nofollow noopener" href="https://templatemo.com">TemplateMo</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-xs-12">
+                    <div class="right-text-content">
+                            <ul class="social-icons">
+                                <li><p>Redes Sociales</p></li>
+                                <li><a rel="nofollow" href="https://www.facebook.com/udecaldas"><i class="fa fa-facebook"></i></a></li>
+                                <li><a rel="nofollow" href="https://twitter.com/udecaldas?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter"></i></a></li>
+                                <li><a rel="nofollow" href="https://www.linkedin.com/search/results/all/?keywords=universidad%20de%20caldas&origin=GLOBAL_SEARCH_HEADER"><i class="fa fa-linkedin"></i></a></li>
+                                <!--<li><a rel="nofollow" href="https://fb.com/templatemo"><i class="fa fa-dribbble"></i></a></li>-->
+                            </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    

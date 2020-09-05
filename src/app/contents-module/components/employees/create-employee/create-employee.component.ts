@@ -123,7 +123,7 @@ export class CreateEmployeeComponent implements OnInit {
 
   SendFormCreateUser(formUser, formExtendEmployee, dataUserPermissions) {
     console.log("datos usuario ", formUser);
-    this.serviceEmployeeService.CreateUser(formUser, formExtendEmployee ,dataUserPermissions).subscribe(
+    this.serviceEmployeeService.CreateUser(formUser, formExtendEmployee, dataUserPermissions).subscribe(
       data => {
         this.RefreshFormAndPermissions();
         console.log(data);

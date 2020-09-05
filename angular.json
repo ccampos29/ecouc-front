@@ -25,12 +25,29 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "src/assets/css/fontAwesome/css/all.css"
+              
+              "src/assets/css/fontAwesome/css/all.css",
+
+              "src/assets/css/bootstrap.min.css",
+              "src/assets/css/templatemo-breezed.css",
+              "src/assets/css/font-awesome.css",
+              "src/assets/css/lightbox.css",
+              "src/assets/css/owl-carousel.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
+              "src/assets/jss/jquery-2.1.0.min.js",
+
+              "src/assets/jss/popper.js",
+              "src/assets/jss/bootstrap.min.js",
+              "src/assets/jss/owl-carousel.js",
+              "src/assets/jss/scrollreveal.min.js",
+              "src/assets/jss/waypoints.min.js",
+              "src/assets/jss/jquery.counterup.min.js",
+              "src/assets/jss/imgfix.min.js", 
+              "src/assets/jss/slick.js", 
+              "src/assets/jss/lightbox.js", 
+              "src/assets/jss/isotope.js", 
+              "src/assets/jss/custom.js"
             ]
           },
           "configurations": {

@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import {SharedModuleModule} from './shared-module/shared-module.module';
 import {UserModuleModule} from './user-module/user-module.module';
 import {ContentsModuleModule} from './contents-module/contents-module.module';
+import { WebPageModule } from './web-page/web-page.module';
+
+
 
 
 @NgModule({
@@ -19,7 +22,8 @@ import {ContentsModuleModule} from './contents-module/contents-module.module';
     AppRoutingModule,
     SharedModuleModule,
     UserModuleModule,
-    ContentsModuleModule
+    ContentsModuleModule,
+    WebPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

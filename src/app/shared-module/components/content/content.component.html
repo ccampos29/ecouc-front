@@ -17,8 +17,32 @@
   </ng-container>
 </ng-template>
 
+
 <ng-template #detailsEmployee>
-  <ng-container *ngIf="this.Component ==='detailsUserComponent'; else detailsEmployee">
+  <ng-container *ngIf="this.Component ==='detailsUserComponent'; else programacionHorario">
    <app-details-user [ParamChildDetailsUser]="this.MsgChildViewAllUser"></app-details-user><!--se envia la el contenido que se acaba de modificar en el padre que a su vez fue enviada por el hijo viewEmployeesComponent-->
   </ng-container>
 </ng-template>
+
+<ng-template #programacionHorario>
+  <ng-container *ngIf="this.Component ==='crearProgramacionHorarioEmpleado'; else visualizarProgramacionUsuario">
+  <app-programacion-empleado-create></app-programacion-empleado-create>
+  </ng-container>
+</ng-template>
+
+<ng-template #visualizarProgramacionUsuario>
+  <ng-container *ngIf="this.Component ==='visualizarProgramacionXusuario'; else RecogidasXempleados">
+  <app-programacion-empleado-visualizar></app-programacion-empleado-visualizar>
+  </ng-container>
+</ng-template>
+<ng-template #RecogidasXempleados>
+  <ng-container *ngIf="this.Component ==='RecogidasXempleados'; else recogidaEmpleadoSede">
+ <app-charts></app-charts>
+  </ng-container>
+</ng-template>
+<ng-template #recogidaEmpleadoSede>
+  <ng-container *ngIf="this.Component ==='recogidaEmpleadoSede'">
+ <app-headquarters-employee-pickup></app-headquarters-employee-pickup>
+  </ng-container>
+</ng-template>
+

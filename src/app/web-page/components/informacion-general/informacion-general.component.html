@@ -1,0 +1,503 @@
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            .ECOUC
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <!--el scroll-to-section es una clase que permite dirigir el scroll por medio del href al id de la etiqueta respectiva-->
+                            <li class="scroll-to-section"><a href="#carouselExampleIndicators" class="active">Inicio</a></li>
+                            <li class="scroll-to-section"><a href="#about">Nosotros</a></li>
+                            <li class="scroll-to-section"><a href="#disposicionesLegales">Legal</a></li>
+                            <li class="scroll-to-section"><a href="#videoJuego">Juego</a></li>
+                            <li class="scroll-to-section"><a href="#projects">Proyectos</a></li>
+                            <!--<li class="submenu">
+                                <a href="javascript:;">Drop Down</a>
+                                <ul>
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">Features</a></li>
+                                    <li><a href="">FAQ's</a></li>
+                                    <li><a href="">Blog</a></li>
+                                </ul>
+                            </li>-->
+                            <li class="scroll-to-section"><a href="#testimonials">Procesos</a></li>
+                            <li class="scroll-to-section"><a href="#contact-us">Contactenos</a></li>
+                            <li class="scroll-to-section"><a [routerLink]="['/login']">Funcionarios</a></li>
+                            
+                            <div class="search-icon">
+                                <a href="#search"><i class="fa fa-search"></i></a>
+                            </div>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+<!-- ***** About Area Starts ***** -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="row">
+
+                    <ng-container  *ngIf="contenido === 'quienesSomos'; else unificacionCodigoColoresGobierno">
+                        
+                        <div class="col-lg-6 col-md-6 col-xs-12">
+                            
+                            <h2>Propósitos del plan de acción, Universidad de Caldas, Colombia, 2019-2022</h2>
+                            <br/>
+                            <div class="left-text-content">
+                                <p>Como se pueden evidenciar hay diversos proyectos sobre el manejo de residuos sólidos, pero pocos estudios
+                                    realizados desde el punto de vista de la enseñanza y es por esta razón que cada vez se hace más importante 
+                                    la creación de proyectos que tengan como base la educación.</p>
+                                <br/>
+                                <p>La Alcaldía de Manizales tiene su Programa institucional 2015 – 2027 para la prestación del servicio
+                                    público domiciliario de aseo en cumplimiento del Decreto 1077 de 2015 y la Resolución 754 de 2014.
+                                    El programa buscar describir el estado actual de la prestación del servicio público domiciliario de 
+                                    aseo en el Municipio de Manizales, asi como formular programas, metas y objetivos para dicho cumplimiento 
+                                    (https://manizales.gov.co/RecursosAlcaldia/201512232000439309.pdf).</p>
+                                <br/>  
+                                <p>Desde 2012, la Universidad de Caldas comprometida con el medio ambiente, viene transformando los 
+                                    desperdicios y desechos a través de procesos biotecnológicos en productos y subproductos para la industria 
+                                    farmacéutica, ambiental y alimenticia por medio del Centro de Investigación y Desarrollo conocido como 
+                                    Planta de Bioprocesos y Agroindustria (). </p>
+                                <br/>    
+                                <p>La planta ubicada en la granja tesorito de la U. de Caldas, cuenta con diferentes unidades para su funcionamiento:</p>
+                                <br/>
+                                <p>-	La Unidad de compostaje: transformación de residuos orgánicos degradables generados por
+                                    restaurantes y cafeterías y las podas de la Universidad que son acopiadas en el Punto limpio 
+                                    de la Institución. De este proceso se obtienen bioinsumos agrícolas.</p>
+                                <br/>
+                                    <ul>
+                                        <li>
+                                        <p>o	Cultivo de hongos macromicetos</p>
+                                        </li>
+                                        <li>
+                                           <p>o	Unidades de Fermentación en estado sólido y Sumergida asistidas con biorreactores.</p>
+                                        </li>
+                                        <li>
+                                           <p> o	Unidad de Operaciones Unitarias.</p>
+                                        </li>
+                                        <li>
+                                            <p>o	Unidades complementarias como la Planta de tratamiento de aguas residuales.</p>        
+                                        </li>
+                                    </ul>
+                                <br/>
+                                <p>Asimismo, la planta cuenta con un laboratorio de medida de la calidad de aguas residuales para 
+                                    la determinación de DBO5, DQO y sólidos y un laboratorio de apoyo para la determinación física, 
+                                    química y microbiológica requeridas para el seguimiento de los procesos que se llevan a cabo en 
+                                    las unidades a escala piloto de la planta.
+                                    (Tomado de https://www.ucaldas.edu.co/portal/universidad-de-caldas-contribuye-al-medio-ambiente-con-el-aprovechamiento-de-residuos-agricolas-y-agroindustriales/ ).
+                                </p>
+                                <br/>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12">
+                            <img src="../../../../assets/images/PlanAcciónWeb-compressor.jpg" class="envasesYreciclajeStyle" style="width:100%;" alt="Cinque Terre"> 
+                        </div>
+                    </ng-container>
+                    
+                    <ng-template #unificacionCodigoColoresGobierno>
+                        <ng-container *ngIf="contenido === 'unificacionCodigoColoresGobierno'; else reciclajeEnColombia " >
+                            <div class="col-lg-12 col-md-12 col-xs-12">
+                                <h2>Gobierno unifica el código de colores para la separación de residuos en la fuente a nivel nacional </h2>
+                                <br/>
+                                <div class="col-lg-10 col-md-10 col-xs-10" class="ion-align-items-center">
+                                    <img class="col-lg-12 col-md-12 col-xs-12" src="../../../../assets/images/Colores_basura.jpeg" > 
+                                </div>
+                                <br/>
+                                <div class="left-text-content">
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    ● El Ministerio de Ambiente y Desarrollo Sostenible, en conjunto con el Ministerio de Vivienda, Ciudad y Territorio, mediante Resolución, establecieron un código de colores unificado para la separación de residuos en la fuente, que deberá adoptarse en todo el territorio nacional a partir del primero de enero de 2021.
+                                                </p>
+                                            </li>
+                                            <br/>
+                                            <li>
+                                                <p>
+                                                ● Los colores para la presentación de residuos sólidos en bolsas u otros recipientes, serán verde (residuos orgánicos aprovechables), blanco (residuos aprovechables) y negro (residuos no aprovechables).
+                                                </p>
+                                            </li>
+                                            <br/>
+                                            <li>
+                                                <p>
+                                                ● Mediante la resolución se adopta, además, el ‘Formato Único Nacional para la Presentación del Programa de Uso Racional de Bolsas Plásticas’.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <br/>
+                                        <p>                                        
+                                        Bogotá, 27 de diciembre 2019. MADS - Con el objetivo de fomentar la cultura ciudadana en materia de separación de residuos a lo largo y ancho del país, y teniendo en cuenta las experiencias y avances de algunas ciudades del país como Bogotá, Bucaramanga o Pereira, Minambiente expidió la Resolución No. 2184 de 2019, mediante la cual empezará a regir en el 2021, el código de colores blanco, negro y verde para la separación de residuos en la fuente, de la siguiente manera:
+                                        </p>
+                                        <ul>
+                                            <li>
+                                                <p>
+                                                    ● Color blanco: Para depositar los residuos aprovechables como plástico, vidrio, metales, papel y cartón.
+                                                </p>
+                                            </li>
+                                        <br/>
+                                            <li>
+                                                <p>
+                                                    ● Color negro: Para depositar residuos no aprovechables como el papel higiénico; servilletas, papeles y cartones contaminados con comida; papeles metalizados, entre otros.
+                                                </p>
+                                            </li>
+                                        <br/>
+                                            <li>
+                                                <p>
+                                                    ● Color verde: Para depositar residuos orgánicos aprovechables como los restos de comida, desechos agrícolas etc.
+                                                </p>
+                                            </li>
+                                        </ul>
+                                        <br/>                                       
+                                        <p>
+                                            Este código de colores deberá ser adoptado por los municipios o distritos que adelanten programas de aprovechamiento conforme a sus Planes de Gestión Integral de Residuos Sólidos (PGIRS) y permitirá simplificar la separación en la fuente en los hogares, preparando al país para el desarrollo e implementación de nuevos esquemas de aprovechamiento, en dónde se unifiquen los esfuerzos entre todos los actores de la cadena.
+                                        </p>
+                                        <br/> 
+                                        <p>
+                                            “Esta disposición se enmarca dentro de la Estrategia Nacional de Economía Circular establecida en
+                                            el Plan Nacional de Desarrollo, que como lo ha dicho el Presidente Duque tiene que trascender de 
+                                            lo enunciativo a lo real, involucrando a todos los sectores productivos, para lograr, desde el 
+                                            punto de vista operacional, producir conservando y conservar produciendo. Asimismo, contribuye 
+                                            a sembrar en todas las escalas de producción del país las llamadas ‘9R’, dentro de las que se 
+                                            encuentran; reducir, reciclar y reutilizar, en dónde la separación adecuada de los residuos juega 
+                                            justamente un papel importante”, afirmó el ministro de Ambiente y Desarrollo Sostenible Ricardo 
+                                            Lozano.
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            ‘Formato Único Nacional para la Presentación del Programa de Uso Racional de Bolsas Plásticas’
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            La Resolución 2148 de 2019, establece, además, el Formato Único Nacional para la Presentación del 
+                                            Programa de Uso Racional de Bolsas Plásticas y del informe de avance, con el fin de garantizar 
+                                            la presentación homogénea de la información por parte de los distribuidores de bolsas plásticas 
+                                            en el país, como los almacenes de cadena, grandes superficies comerciales, supermercados de cadena, 
+                                            entre otros. Así mismo, para facilitar la consolidación y análisis de los datos por parte de las 
+                                            autoridades ambientales competentes.
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            Cabe resaltar que el Programa de Uso Racional de Bolsas Plásticas, es un instrumento de gestión 
+                                            reglamentado mediante la Resolución 0668 del 28 de abril de 2016, que deben formular e implementar 
+                                            los grandes distribuidores de bolsas plásticas, y el cual busca sensibilizar a los sectores comerciales 
+                                            y al consumidor final de estas bolsas, sobre la necesidad de racionalizar su uso y minimizar al máximo 
+                                            la utilización de las que no son reutilizables o de un solo uso.
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            Sumado a lo anterior, la nueva resolución adiciona una obligación para la presentación del reporte anual 
+                                            por parte de los distribuidores que no están obligados a presentar el Programa de Uso Racional de Bolsas 
+                                            Plásticas, los cuales, a partir de ahora, además de informar la cantidad de bolsas vendidas en los puntos 
+                                            de pago, tendrán que realizar el cálculo del porcentaje anual de reducción de bolsas vendidas respecto al 
+                                            año base (2015 o 2016, dependiendo del inicio de operación de actividades comerciales).
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            Texto sacado de la pagina gubernamental del ministerio del medio ambiente colombia: https://www.minambiente.gov.co/index.php/noticias/4595-gobierno-unifica-el-codigo-de-colores-para-la-separacion-de-residuos-en-la-fuente-a-nivel-nacional#
+                                        </p>
+                                    <br/>
+                                </div>
+                            </div>
+                            
+                        </ng-container>
+                    </ng-template>
+                    <ng-template #reciclajeEnColombia>
+                        <ng-container *ngIf="contenido === 'reciclajeEnColombia'; else contaminacionMarinaEnColombia" >
+                            <div class="col-lg-12 col-md-12 col-xs-12">
+                                <h2>Colombia recicla el 17% de las 12 millones de toneladas de residuos</h2>
+                                <br/>
+                                <div class="col-lg-10 col-md-10 col-xs-10" class="ion-align-items-center">
+                                    <img class="col-lg-12 col-md-12 col-xs-12" style="height: 400px;" src="../../../../assets/images/reciclamas.jpg" > 
+                                </div>
+                                <div class="left-text-content">
+                                    <p>
+                                        Texto sacado de : https://www.vanguardia.com/colombia/cuanto-se-recicla-en-colombia-FC1545304                                    
+                                    </p>
+                                    <br/>
+                                        <h5>                                        
+                                            De las 12 millones de toneladas de basura que se producen en Colombia solo se recicla un 17%, tanto de orgánicos, como de otros materiales, según MinAmbiente.
+                                        </h5>
+                                        <br/>
+                                        <p>
+                                            Reciclar hojas de papel, cajas de cartón, latas, botellas de plástico y vidrio, telas y hasta elementos orgánicos para evitar que vayan a parar a los rellenos sanitarios, debería ser algo más común. No obstante, de las 12 millones de toneladas de basura que se producen en Colombia solo se recicla un 17%, tanto de orgánicos, como de otros materiales, según datos del Ministerio de Ambiente. 
+                                        </p>
+                                            
+                                        <br/>                                       
+                                        <p>
+                                            Es importante tener en cuenta que la cuestión del manejo de las basuras no es solo un tema ambiental, sino que está relacionada con emergencias sanitarias. Un estudio del Banco Mundial y Planeación Nacional, de 2015, indica que “si se continúa con la misma dinámica de generación de residuos, sin adecuadas medidas para mejorar su aprovechamiento o tratamiento, y con patrones de producción y consumo insostenibles, en el año 2030 tendremos emergencias sanitarias en la mayoría de ciudades del país y una alta generación de emisiones de gases de efecto invernadero”. 
+                                        </p>
+                                        <br/> 
+                                        <p>
+                                            Por eso, se recomienda que en los hogares haya al menos una separación en la fuente que implique tener una bolsa blanca (aunque sea más costosa), en la que se depositen materiales aprovechables secos como cartón, vidrio, papel y tela; y otra negra, con el material no aprovechable. Lo ideal es contar con otra más para los desechos orgánicos.
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            “Necesitamos ser conscientes de la importancia de reciclar, de cómo realizar una correcta separación desde nuestros hogares”, dijo Patricia Pinzón, subdirectora de aprovechamiento de la Unidad Administrativa de Especial de Servicios Públicos. </p>
+                                        <br/>
+                                        <h5> ¿Qué hacer con la basura? </h5>
+                                        <br/>
+                                        <p>
+                                            Actualmente un tercio de todos los desechos urbanos de América Latina y el Caribe termina en basurales a cielo abierto o en el medio ambiente, una práctica que está contaminando los suelos, el agua y el aire, y afecta la salud pública. Estos datos provienen de la Perspectiva de la Gestión de Residuos en América Latina y el Caribe, lanzada en octubre de 2018, de la Organización de Naciones Unidas (ONU) Medio Ambiente. 
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            Por lo pronto, existen varias plantas de aprovechamiento de estos materiales, varias ubicadas en Antioquia. “Moravia está llena de plantas de aprovechamiento. Allá compran vidrio a alrededor de 700.000 pesos una tonelada. Lo muelen, lo peletizan (queda como un granito de arroz) y ahí ya cuesta 2 o hasta 2,2 millones de pesos una tonelada”, dijo Luis Aníbal Sepúlveda, director de la Asociación Colombiana de Ingeniería Sanitaria y Ambiental (Acodal). 
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            Ese material se reutiliza para la fabricación de bolsas plásticas, vasos, entre otros. “Es materia prima hasta en un 30% más barata que la virgen”, señaló Sepúlveda. </p>
+                                        <br/>
+                                        <p>
+                                            Texto sacado de la pagina gubernamental del ministerio del medio ambiente colombia: https://www.minambiente.gov.co/index.php/noticias/4595-gobierno-unifica-el-codigo-de-colores-para-la-separacion-de-residuos-en-la-fuente-a-nivel-nacional#
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            En cuanto al aprovechamiento de orgánicos, la planta de Urrao, también en Antioquia, ha recibido desde agosto de 2018, cuando inició su operación, unas 1.200 toneladas que ha transformado en abono para suelos. De un 55% que se puede aprovechar este recurso, la meta es hacerlo al menos con el 35%. Actualmente se aprovecha solo el 6% en Antioquia y el 1% en el país. 
+                                        </p>
+                                        <br/>
+                                        <h5>
+                                            OTRAS INICIATIVAS 
+                                        </h5>
+                                        <br/>
+                                        <p>
+                                            Proyectos como el del Grupo Retorna, una alianza de las corporaciones que pertenecen al proyecto especial de posconsumo de la Asociación Nacional de Empresarios (Andi), buscan generar conciencia alrededor de la necesidad de la reutilización de materiales para lograr que a 2030 el país pueda cumplir la meta de aprovechar el 30% de residuos como el papel, cartón, plásticos, vidrios y tela. 
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            Desde 2012 el Grupo Retorna ha logrado llevar más de 243.000 toneladas de residuos al posconsumo. Las corporaciones que pertenecen al proyecto como Cierra el Ciclo, EcoCómputo, Pilas con el Ambiente, Red Verde, RecoEnergy y Rueda Verde, cumplen el principio de ‘responsabilidad extendida del productor’, aportándole a la estrategia nacional de Economía Circular, en la cual los fabricantes e importadores de productos son responsables de establecer canales de devolución de residuos, a través de los cuales los consumidores puedan devolver dichos productos cuando estos se convierten en residuos, dijo Andrés Santana, director del Grupo Retorna. 
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            Con una inversión de más de $43.286 millones y más de 156 empresas aliadas, brindan una solución integral al consumidor para buscar la gestión segura de los residuos de plaguicidas, computadores, pilas, electrodomésticos, baterías con plomo ácido y llantas que la mayoría de personas no sabe dónde ubicar. 
+                                        </p>
+                                        <br/>
+                                        <h5>
+                                            dato 
+                                        </h5>
+                                        <br/>
+                                        <p>
+                                            Hoy en día la cifra de aprovechamiento de residuos como el papel, cartón, plásticos, vidrios y tela es de 8 % a nivel nacional. La Andi espera en su Visión 2030 que la brecha en reciclaje y reutilización de materiales de Colombia frente a referentes internacionales se reduzca.  
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            La fuente original de la informacion la podemos encontrar en la pagina oficial: https://www.vanguardia.com/colombia/cuanto-se-recicla-en-colombia-FC1545304
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            
+                                        </p>
+                                    <br/>
+                                </div>
+                            </div>
+                            
+                        </ng-container>
+                    </ng-template>
+                    <ng-template #contaminacionMarinaEnColombia>
+                        <ng-container *ngIf="contenido === 'contaminacionMarinaEnColombia'; else basuraEspacial" >
+                            <div class="col-lg-12 col-md-12 col-xs-12">
+                                <h2>Expertos: Contaminación de mares y ríos por plásticos es alarmante en Colombia</h2>
+                                <br/>
+                                <div class="col-lg-10 col-md-10 col-xs-10" class="ion-align-items-center">
+                                    <img class="col-lg-12 col-md-12 col-xs-12" style="height: 500px;" src="../../../../assets/images/contaminacionmarcolombia.jpg" > 
+                                </div>
+                                <div class="left-text-content">
+                                    <p>
+                                        Texto sacado de : https://www.elperiodico.com/es/medio-ambiente/20181112/contaminacion-mares-rios-plasticos-colombia-7141963                                    
+                                    </p>
+                                    <br/>
+                                        <h5>                                        
+                                            Según la visión de algunos especialistas en el tema, este país se enfrenta a la posibilidad de vivir un "tsunami" de plástico
+                                        </h5>
+                                        <br/>
+                                        <p>
+                                            Colombia puede ser el mejor ejemplo de los daños que puede ocasionar la contaminación por residuos sintéticos en el entorno natural. En este país sudamericano se consumen 24 kilos de plástico por persona al año, se enfrenta a la posibilidad de padecer un "tsunami" ambiental por cuenta de la contaminación de mares y ríos con este material.
+                                        </p>
+                                            
+                                        <br/>                                       
+                                        <p>
+                                            "El panorama es aterrador porque los lugares más preciados en el país, como manglares, mares y ríos, sufren una contaminación por plástico inmensa", indicó la directora de la ONG ambientalista Greenpeace Colombia, Silvia Gómez.
+                                        </p>
+                                        <br/> 
+                                        <h5>
+                                            Generación excesiva de basura plástica
+                                        </h5>
+                                        <br/>
+                                        <p>
+                                            Del consumo per cápita que hacen los colombianos, precisó Gómez, "el 56 % es plástico de uso único" como pitillos, cubiertos, tapas de refresco o envases de jugo. De hecho, se ha establecido que el país genera unas 12 millones de toneladas de residuos sólidos al año y solo recicla el 17 %.
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            En el caso de Bogotá, la cifra alcanza las 7.500 toneladas al día, de las que se recicla un 15 %. Estos datos, señaló la vocera, "permiten establecer que se necesita lanzar una voz de alarma con respecto al verdadero tsunami de plástico que enfrentan sitios como las costas colombianas".
+                                        </p>
+                                        <h5> ¿Qué hacer con la basura? </h5>
+                                        <br/>
+                                        <p>
+                                            La preocupación de Greenpeace se acrecentó hace tres meses cuando varios de sus expertos realizaron un viaje por las costas Atlántica y Pacífica para establecer si Colombia está “ad portas” de una crisis por polución de plástico.
+                                        </p>
+                                        <br/>
+                                        <h5>
+                                            Daños irreparables  
+                                        </h5>
+                                        <br/> 
+                                        <p>
+                                            "Ha sido impactante lo que hemos visto porque el plástico está borrando la belleza de las costas", indicó. Para crear conciencia sobre la situación, Greenpeace Colombia lleva a cabo hoy una jornada en Bogotá en la que los asistentes recrean "un mar humano que lucha contra los plásticos que azotan al país" y realizan una marcha por la ciclovía.
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            Según la bióloga marina Sandra Bessudo, directora de la Fundación Malpelo, "es aterrador que en algunas áreas del Pacífico colombiano sea tanta la basura que hay que los niños no diferencian entre una planta natural y un plástico".
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            Para tratar de contrarrestar esta problemática Bessudo presentó en septiembre de este año la campaña #EsTiempodeActuar junto a representantes de la marca de relojería suiza TAG Heuer.
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            La iniciativa busca apoyar a los habitantes de Jurubirá, corregimiento del municipio de Nuquí, que hace parte del empobrecido departamento de Chocó, en el noroeste de Colombia, para que el plástico que les llega a través de ríos y el mar Pacífico sea aprovechado como fuente de ingresos mediante la recolección, compactación y posterior venta.
+                                        </p>
+                                        <br/>
+                                        <h5>
+                                            Repercusiones en la salud humana
+                                        </h5>
+                                        <br/>
+                                        <p>
+                                            En el mundo, las estimaciones para 2050 son alarmantes ya que se cree que habrá 12.000 millones de toneladas de desechos plásticos en entornos naturales. De hecho, el 10 % de todo plástico desechado en el planeta ingresa al mar y de ese porcentaje la mayor parte termina en el lecho marino.                                        
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            Al analizar dicha realidad se ha podido determinar que las especies marinas son unas de las más afectadas por el consumo de plástico, especialmente las aves, tortugas, ballenas y delfines.                                        
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            También, las personas de bajos ingresos económicos que viven cerca a mares y ríos se enfrentan a un mayor impacto en su salud al ingerir animales contaminados con este material. En el caso colombiano, precisó Silvia Gómez, "el 90 % de las playas de la costa Atlántica están contaminadas con microplástico", entendido como partículas de cinco milímetros de diámetro.                                        
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            Además, entre los 20 ríos más contaminados del planeta con plástico figuran el Amazonas, en el puesto siete, y el Magdalena, la principal arteria fluvial del país, en el 15.                                        
+                                        </p>
+                                        <br/>
+                                        <h5>
+                                            Alerta a nivel mundial
+                                        </h5>
+                                        <br/>
+                                        <p>
+                                            Precisamente, el gastroenterólogo Philipp Schwabl, de la Universidad Médica de Viena, reveló en octubre pasado los resultados de un estudio mediante el cual halló microplástico en el excremento de ocho personas provenientes de Finlandia, Italia, Japón, los Países Bajos, Polonia, Rusia, Reino Unido y Austria.                                        
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            "La mayoría de los participantes bebieron líquidos de botellas de plástico, pero también fue común la ingesta de pescados y mariscos. Es altamente probable que la comida es contaminada con plásticos durante varias etapas del proceso de alimentos o como resultado del empaquetado", comentó Schwabl a periodistas.                                        
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            Debido a todos los hallazgos anteriores Greenpeace lanzó la campaña "Colombia mejor sin plásticos", encaminada a recoger 80.000 firmas para que el Ministerio de Ambiente y Desarrollo Sostenible cumpla con la implementación del Plan Nacional de Gestión Integral de Residuos Sólidos e incluya en él la prohibición del plástico de uso único.
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            Texto sacado de : https://www.elperiodico.com/es/medio-ambiente/20181112/contaminacion-mares-rios-plasticos-colombia-7141963                                    
+                                        </p>
+                                    <br/>
+                                </div>
+                            </div>
+                            
+                        </ng-container>
+                    </ng-template>
+                    <ng-template #basuraEspacial>
+                        <ng-container *ngIf="contenido === 'basuraEspacial'" >
+                            <div class="col-lg-12 col-md-12 col-xs-12">
+                                <h2>Toneladas de basura espacial</h2>
+                                <br/>
+                                <div class="col-lg-10 col-md-10 col-xs-10" class="ion-align-items-center">
+                                    <img class="col-lg-12 col-md-12 col-xs-12" style="height: 500px;" src="../../../../assets/images/basuraespacial.jpg" > 
+                                </div>
+                                <div class="left-text-content">
+                                    <p>
+                                        Texto sacado de : https://www.ultimahora.es/noticias/sociedad/2020/07/08/1177745/toneladas-basura-espacial.html                                    
+                                    </p>
+                                    <br/>
+                                        <h5>                                        
+                                            El ser humano no se conforma con ser una auténtica plaga destructora para la Tierra, también está empeñado en ensuciar el espacio que rodea al planeta.
+                                            Archivo
+                                        </h5>
+                                        <br/>
+                                        <p>
+                                            Los escombros espaciales que rodean actualmente la Tierra, más conocidos como basura espacial, han vuelto a aumentar a lo largo de 2017, tal y como ya hizo en 2016, llegando a sobrepasar los 18.800 objetos. Según datos de la Oficina del Programa de la NASA de Restos Orbitales, actualizados a enero de 2018, se contabilizaban 18.835 objetos presentes en torno al planeta, un número que es consecuencia del continuo aumento de estas piezas a lo largo del año. De hecho, 2015 terminó sin superar los 17.000 objetos, mientras que 2016 cerró con 17.876 fragmentos. Esto indica que, en un año, 956 objetos más se han incorporado al espacio.                                        
+                                        </p>
+                                            
+                                        <br/>                                       
+                                        <p>
+                                            Según el análisis que presenta la NASA, la tendencia no se rompe, ya que las subidas habían sido constantes en los últimos años. Sin embargo, tanto 2014 como 2015 no presentaron grandes cambios y la agencia espacial estadounidense habló de «estabilidad» en torno a los 16.000 escombros. Pero esta nueva cifra implica un aumento en casi 13.000 objetos en los dos últimos años.                                        
+                                        </p>
+                                        <br/> 
+                                        <p>
+                                            Este recuento que elabora cada año la NASA contabiliza la cantidad de satélites activos o inactivos que han sido lanzados o bien bajados de sus órbitas para ser hundidos en el mar, así como cohetes espaciales antiguos y en funcionamiento, y demás objetos procedentes de la fragmentación de residuos, generados por ejemplo en explosiones.                                        
+                                        </p>
+                                        <br/>
+                                        <h5>
+                                            La URSS Y Estados Unidos
+                                        </h5>
+                                        <br/>
+                                        <p>
+                                            De manera desglosada, de estos 18.835 cuerpos espaciales que rondan el planeta, la antigua Unión Soviética se mantiene como la que mayor cantidad de basura desecha en el espacio, con un total de 6.518 objetos, seguida de Estados Unidos con 6.321. El país norteamericano ha aumentado en más de 600 objetos su cuota de basura espacial con respecto a las cifras registradas en 2016. También la antigua Unión Soviética –hoy conocida como Comunidad de Estados Independientes– ha registrado una subida en este periodo, aunque en este caso en 172 cuerpos espaciales. Estos datos sugieren que, si se mantienen estos niveles de incremento en ambos países, Estados Unidos sobrepasaría en un año a la antigua URSS como mayor contribuyente de desechos del espacio.                                        
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            China, por su parte, suma 3.863 objetos espaciales. Con respecto a 2016, el país asiático ha sumado 57 escombros. Tanto en la antigua URSS, como Estados Unidos y China, el incremento registrado en 2017 es mayor que el contabilizado el año anterior.                                        
+                                        </p>
+                                        <br/>
+                                        <h5> Europa </h5>
+                                        <br/>
+                                        <p>
+                                            Por su parte, la Agencia Espacial Europea (ESA) sigue siendo la entidad espacial que menos objetos desechados genera en el espacio, con 137, y la que menos ha visto incrementado el número de desechos, sólo cuatro más en un año. De éstos, 81 proceden de explosiones y 56 son cohetes, cuerpos y demás escombros. Además de ser la contribuyente que menos basura espacial ha aportado al espacio en 2017, también es la única que ha reducido el número de cohetes, cuerpos y demás escombros, pues 2016 cerró con 60 objetos.                                        
+                                        </p>
+                                        <br/>
+                                        <p>
+                                            Texto sacado de : https://www.elperiodico.com/es/medio-ambiente/20181112/contaminacion-mares-rios-plasticos-colombia-7141963                                    
+                                        </p>
+                                    <br/>
+                                </div>
+                            </div>
+                            
+                        </ng-container>
+                    </ng-template>
+
+                </div>
+            </div>
+        </section>
+<!-- ***** About Area Ends ***** -->
+
+<!-- ***** footer ***** -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-xs-12">
+                <div class="left-text-content">
+                    <p>Copyright &copy; 2020, Universidad de Caldas, Manizales Caldas. </p>
+                    
+                   <p>Design: <a rel="nofollow noopener" href="https://templatemo.com">TemplateMo</a></p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xs-12">
+                <div class="right-text-content">
+                        <ul class="social-icons">
+                            <li><p>Redes Sociales</p></li>
+                            <li><a rel="nofollow" href="https://www.facebook.com/udecaldas"><i class="fa fa-facebook"></i></a></li>
+                            <li><a rel="nofollow" href="https://twitter.com/udecaldas?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter"></i></a></li>
+                            <li><a rel="nofollow" href="https://www.linkedin.com/search/results/all/?keywords=universidad%20de%20caldas&origin=GLOBAL_SEARCH_HEADER"><i class="fa fa-linkedin"></i></a></li>
+                            <!--<li><a rel="nofollow" href="https://fb.com/templatemo"><i class="fa fa-dribbble"></i></a></li>-->
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

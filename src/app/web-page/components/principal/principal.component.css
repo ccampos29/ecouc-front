@@ -1,0 +1,33 @@
+.scrollFlotante{
+    display:scroll;
+    position:fixed;
+    bottom:15px;
+    right:0px;
+    margin-left: -49%;
+}
+.envasesYreciclajeStyle{
+    width: 220px;
+    height: 200px;
+}
+.imagen{
+   padding-left: 7%;
+}
+.targetasStyle{
+    
+    padding: 2%;
+}
+.modal-lg {
+    max-width: 85% !important;
+    
+}
+.videoProyectos{
+    height: 450px;
+}
+.carousel-captionh3 {
+    color:lavender;
+    text-shadow: 4px 4px 4px black;
+}
+.carousel-captionh1 {
+    color:lavender;
+    text-shadow: 4px 4px 4px black;
+}

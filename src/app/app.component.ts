@@ -16,7 +16,8 @@ export class AppComponent {
 
   private verificar() {
     if (sessionStorage.getItem('credentials') === 'null' || sessionStorage.getItem('credentials') == null) {
-      this.router.navigateByUrl('/login');
+      //this.router.navigateByUrl('/login');
+      this.router.navigateByUrl('/webpage');
     }
     else {
       this.router.navigateByUrl('/admin');

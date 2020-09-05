@@ -1,0 +1,234 @@
+
+    <!-- ***** Header Area Start ***** -->
+    <header class="header-area header-sticky">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <nav class="main-nav">
+                        <!-- ***** Logo Start ***** -->
+                        <a href="index.html" class="logo">
+                            .ECOUC
+                        </a>
+                        <!-- ***** Logo End ***** -->
+                        <!-- ***** Menu Start ***** -->
+                        <ul class="nav">
+                            <!--el scroll-to-section es una clase que permite dirigir el scroll por medio del href al id de la etiqueta respectiva-->
+                            <li class="scroll-to-section"><a href="#carouselExampleIndicators" class="active">Inicio</a></li>
+                            <li class="scroll-to-section"><a href="#about">Nosotros</a></li>
+                            <li class="scroll-to-section"><a href="#disposicionesLegales">Legal</a></li>
+                            <li class="scroll-to-section"><a href="#videoJuego">Juego</a></li>
+                            <li class="scroll-to-section"><a href="#projects">Proyectos</a></li>
+                            <!--<li class="submenu">
+                                <a href="javascript:;">Drop Down</a>
+                                <ul>
+                                    <li><a href="">About Us</a></li>
+                                    <li><a href="">Features</a></li>
+                                    <li><a href="">FAQ's</a></li>
+                                    <li><a href="">Blog</a></li>
+                                </ul>
+                            </li>-->
+                            <li class="scroll-to-section"><a href="#testimonials">Procesos</a></li>
+                            <li class="scroll-to-section"><a href="#contact-us">Contactenos</a></li>
+                            <li class="scroll-to-section"><a [routerLink]="['/login']">Funcionarios</a></li>
+                            
+                            <div class="search-icon">
+                                <a href="#search"><i class="fa fa-search"></i></a>
+                            </div>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ***** Header Area End ***** -->
+<!-- ***** About Area Starts ***** -->
+<section class="section" id="about">
+    <div class="container">
+        <div class="row">
+
+                    <ng-container  *ngIf="contenido === 'procesoReciclaje'; else comoReciclar">
+                        
+                        <div class="col-lg-6 col-md-6 col-xs-12">
+                            <h2>El proceso de reciclaje: Cómo y por qué es importante</h2>
+                            <br/>
+                            <div class="left-text-content">
+                                <p>Conocer el proceso de reciclaje nos acerca más a saber por qué tiene tanta importancia para nosotros y tomar las medidas adecuadas para que este sea mucho más eficaz. Sobre todo teniendo en cuenta que, según los últimos informes, aún se recicla menos de la mitad de los residuos recuperables, de modo que falta todavía bastante trabajo por hacer.</p>
+                                <br/>
+                                <h2>Qué es el reciclaje</h2>
+                                <br/>
+                                <p>El reciclaje es un proceso de transformación mediante técnicas fisicoquímicas o mecánicas cuyo resultado es la obtención de nuevas materias primas a partir de materiales usados o desechados.
+                                Gracias a este proceso los viejos materiales pueden iniciar una nuevo ciclo de vida y utilización: puede tratarse de papel, cartón, plásticos, vidrio, aluminio, hierro,…
+                                El reciclaje tiene muchas ventajas y es fundamental para una sociedad sostenible.
+                                Ventajas ambientales:
+                                </p>
+                                <br/>
+                                <ul>
+                                    <li>
+                                        <p>- La energía necesaria para producir un producto por uno nuevo es mayor que la energía necesaria para producirlo a partir de materiales reciclados.</p>
+                                    </li>
+                                    <li>
+                                    <p>- Se conservan los recursos naturales.</p>
+                                    </li> 
+                                    <li>  
+                                    <p>- Se reduce el volumen de residuos sólidos destinado a vertedero.</p>
+                                    </li>
+                                </ul>
+                                <br/>
+                                <h2>Tipos de materiales que se reciclan</h2>
+                                <br/>
+                                <p>La lista de los materiales aprovechables cada día crece más, gracias a las ganas, el ingenio y la voluntad de muchos empresarios que le han apostado al reciclaje.</p>
+                                <br/>
+                                <h2>Plásticos:</h2>
+                                <br/>
+                                <p>Las bolsas para empacar de todos los tamaños y colores, botellas de gaseosa y agua (PET) blanco, verde y azul, vasos de yogures, tapas, envases de shampoo y lavavajillas, copas de acrílico, juguetes, contenedores, tuberías, botellas de productos de limpieza, bolsas de detergente en polvo, bolsas de leche y bolsas de suero.</p>
+                                <br/>
+                                <h2>Vidrio:</h2>
+                                <br/>
+                                <p>Todas las botellas y frascos de color verde, ámbar y transparente, los vasos, los floreros, ceniceros y todos aquellos elementos de vidrio que no tengan otros recubrimientos.</p>
+                                <br/>
+                                <h2>Metal:</h2>
+                                <br/>
+                                <p> Los envases de lata de los alimentos y bebidas, el aluminio, hierro, cobre, pero que estén libres de recubrimientos, las partes metálicas de electrodomésticos y juguetes.</p>
+                                <br/>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-xs-12">
+                            <img src="../../../../assets/images/Reciclar.jpg" class="envasesYreciclajeStyle rounded-circle" alt="Cinque Terre"> 
+                        </div>
+                    </ng-container>
+                    
+                    <ng-template #comoReciclar>
+                        <ng-container *ngIf="contenido === 'comoReciclar'; else dudas" >
+                            <div class="col-lg-12 col-md-12 col-xs-12">
+                                <h2>El proceso de reciclaje:</h2>
+                                <br/>
+                                <p>A todos nos ha pasado que al momento de reciclar, nos sentimos confundidos con muchos residuos. </p>
+                                <br/>
+                                <p>en el siguiente video aprenderemos como se hace este proceso en el hogar, este un video que podemos encontrar 
+                                    en el siguiente link:
+                                </p>
+                                    <p>https://www.youtube.com/watch?v=73CIPxBv_Sc y creado por una empresa llamada Magic Markers para 
+                                    bogota, son las mismas condiciones que se deben llevar acabo para todos los municios de colombia.
+                                    
+                                </p>
+                                <br/>
+                                <iframe class="videoReciclaje" width="853" height="480" src="https://www.youtube.com/embed/73CIPxBv_Sc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                               
+                                
+                            </div>
+                        </ng-container>
+                    
+                    </ng-template>
+                    
+                    <ng-template #dudas>
+                        <ng-container *ngIf="contenido === 'dudas' " >
+                            <div class="col-lg-6 col-md-6 col-xs-12">
+                                <h2>Preguntas frecuentes:</h2>
+                                <br/>
+                                <div class="left-text-content">
+                                    <p>La población ha asumido el valor del reciclaje pero sigue teniendo dudas sobre algunos detalles cotidianos como, ¿dónde tirar el papel de aluminio?.</p>
+                                    <br/>
+                                    <h2>¿Se puede reciclar una crema de dientes a pesar de que quedan residuos ahí adentro?</h2>
+                                    <br/>
+                                    <p>Sí se puede reciclar. Seguramente has pensado que por tener todavía crema dental en el recipiente, no clasifica dentro de los plásticos reciclables.
+                                    Lo cierto es que estos contenedores tienen en su mayoría mezclas de plástico HDPE y PP y se pueden reciclar. En los centros de reciclaje de Bogotá
+                                    y centros de reciclaje de Medellín, por ejemplo, hay un proceso de lavado para que los recipientes queden totalmente limpios, y los residuos se puedan 
+                                    usar en otros procesos químicos.
+                                    </p>
+                                    <br/>
+                                    <h2>¿Y qué pasa con el cepillo de dientes que tiene plástico pero que ya está usado?</h2>
+                                    <br/>
+                                    <p>También se puede reciclar. Efectivamente la parte de la “escobilla” que entra a la boca no se usará, se cortará y se separará del resto, pero los 
+                                    cepillos en sí son plásticos reciclables y su uso en una planta recicladora también puede ayudar a disminuir el calentamiento global.
+                                    </p>
+                                    <br/>
+                                    <h2>¿Y qué pasa con la crema de afeitar que también tiene plástico?</h2>
+                                    <br/>
+                                    <p>También se pueden reciclar en los centros de reciclaje. Pasan por el proceso de lavado similar al de la crema de dientes. Su uso posterior depende 
+                                    mucho de los mercados que lo demanden. Cada producto tiene sus propios mercados como el vidrio reciclado, el cartón reciclado o el pet reciclado. 
+                                    Por eso es tan importante fijarse bien en las canecas para reciclar, su correcto uso facilita la economía circular.
+                                    </p>
+                                    <br/>
+                                    <h2>¿Si mi computador sacó la mano, lo tiro a la basura?</h2>
+                                    <br/>
+                                    <p>Ni se te ocurra botarlo junto a residuos no reciclables. Estos desechos, que pueden producir contaminación ambiental, al igual que las pilas o baterías, 
+                                    se llaman Residuos de Aparatos Eléctricos y Electrónicos (RAEE) y requieren una gestión diferente. Así que no pienses en cuál bolsa toca meterlos porque no 
+                                    es el caso. Hay empresas que tienen capacidades técnicas y certificaciones ambientales para garantizar su uso posterior y evitar un impacto ambiental por su mal uso.
+                                    Muchos componentes se pueden reusar en otros equipos de tecnología, por ejemplo.
+                                    Por si acaso, en Colombia, según revista Dinero, empresas como Storkkermill / Cmbe producen, importan y venden máquinas para apoyar el reciclaje de residuos 
+                                    electrónicos en Latinoamérica, mientras que la multinacional Dell EMC ha implementado desde hace varios años programas de reciclaje destinados a fortalecer 
+                                    las políticas verdes. También échale un ojo al programa posconsumo para computadores y periféricos Ecocómputo y el de electrodomésticos usados llamado Red Verde.
+                                    </p>
+                                    <br/>
+                                    <h2>¿Qué pasa con los chupos y el tetero de un bebé que también tienen plástico?</h2>
+                                    <br/>
+                                    <p>Al igual que algunos juguetes, se componen de un tipo de plástico PVC y estos plásticos reciclables pueden ser aprovechados en los centros de reciclaje como 
+                                    materia prima de nuevos productos. Eso sí, no serán chupos ni teteros nuevamente sino suelas de zapatos o botas.
+                                    </p>
+                                    <br/>
+                                    <h2>¿Qué pasa con el paquete de papas o de Doritos si siempre quedará algo de comida?</h2>
+                                    <br/>
+                                    <p>A estos residuos se les llama “polilaminados” y son la materia prima de madera y bloques
+                                    de construcción plásticos, tras ser mezclados con otros plásticos que vienen con residuos de 
+                                    alimentos. Los emprendimientos hoy en día trabajan en procedimientos para eliminar residuos de 
+                                    grasas y alimentos del plástico.
+                                    </p>
+                                    <br/>
+                                    <h2> ¿Y qué pasa con un bombillo que se fundió?</h2>
+                                    <br/>
+                                    <p>Al igual que las pilas y las baterías, los bombillos requieren de una gestión especializada para
+                                    su recolección y aprovechamiento, en particular para aquellos que dentro de sus componentes contienen 
+                                    mercurio, un metal que a temperatura ambiente es líquido, pero que en fase gaseosa es peligroso para la 
+                                    salud. Por eso, los bombillos también deben disponerse por medio de prestadores certificados por las 
+                                    autoridades ambientales locales para su correcta recolección, transporte y aprovechamiento. 
+                                    Solo así se evitará su impacto ambiental.
+                                    </p>
+                                    <br/>
+                                    <p>Esta informacion y mucho mas la puedes encontrar en la web original https://www.las2orillas.co/siete-preguntas-no-tan-obvias-a-la-hora-de-reciclar-plastico/
+                                    </p>
+                                    <br/>
+                                   
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-xs-12">
+                                <img src="../../../../assets/images/Reciclar.jpg" class="envasesYreciclajeStyle rounded-circle" alt="Cinque Terre"> 
+                            </div>
+                        </ng-container>
+                    </ng-template>
+
+                </div>
+            </div>
+            
+        
+</section>
+<!-- ***** About Area Ends ***** -->
+
+<!-- ***** footer ***** -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-xs-12">
+                <div class="left-text-content">
+                    <p>Copyright &copy; 2020, Universidad de Caldas, Manizales Caldas. </p>
+                    
+                   <p>Design: <a rel="nofollow noopener" href="https://templatemo.com">TemplateMo</a></p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-xs-12">
+                <div class="right-text-content">
+                        <ul class="social-icons">
+                            <li><p>Redes Sociales</p></li>
+                            <li><a rel="nofollow" href="https://www.facebook.com/udecaldas"><i class="fa fa-facebook"></i></a></li>
+                            <li><a rel="nofollow" href="https://twitter.com/udecaldas?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter"></i></a></li>
+                            <li><a rel="nofollow" href="https://www.linkedin.com/search/results/all/?keywords=universidad%20de%20caldas&origin=GLOBAL_SEARCH_HEADER"><i class="fa fa-linkedin"></i></a></li>
+                            <!--<li><a rel="nofollow" href="https://fb.com/templatemo"><i class="fa fa-dribbble"></i></a></li>-->
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

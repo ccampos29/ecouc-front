@@ -1,0 +1,51 @@
+<div><h1 class="title-styles-components">Ver Programacion Por Empleado</h1></div>
+
+<div class="content-form col-md-12">
+    <!--inicio formulario usuario normal sin extension-->
+    <form [formGroup]="formUsuario" class="col-md-12 container-fluid">
+        <div class="form-row col-md-12" style="padding:0px"> 
+            <div class="form-group col-md-3">
+                <label for="usuario">Usuario: </label>
+                <select formControlName="usuario" class="form-control" id="usuario">
+                    <option *ngFor="let itemusuario of listaUsuario" [value]="itemusuario.id">
+                        {{itemusuario.userName}}
+                    </option>
+                </select>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary"  [disabled]="!formUsuario.valid" (click)="visualizarProgramacionEmpleado()">Visualizar Programacion Empleado</button>
+    </form>
+    <div style="padding-bottom:20px"></div>
+</div>
+
+<ng-container *ngIf="this.listaProgramacionesXempleado.length>0">
+ 
+    <div class="table-responsive tableUser style-forms"><!--las dos ultimas clases pertenecen a estilos personalizados NO son de bootstrap4-->
+        <table class="table col-md-12" >
+            <thead class="thead-dark col-md-12">
+            <tr>
+                <th>dia</th>
+                <th>horaIni</th>
+                <th>horaFin</th>
+                <th>sede</th>
+               <!--<th>Actualizar/Eliminar</th>-->
+               <th>Eliminar</th>
+            </tr>
+            </thead>
+            <tbody class="col-md-12" >
+                <tr *ngFor="let data of listaProgramacionesXempleado" >
+                    <td>{{data.dia}}</td>
+                    <td>{{data.horaIni}}</td>
+                    <td>{{data.horaFin}}</td>
+                    <td>{{data.sede}}</td>
+                    <td><!--ultima columna la cual contiene los botones actualizar y eliminar en cada una de sus filas-->
+                        <div class="btn col-md-12" >
+                            <!--<button class="btn btn-success col-md-5" (click)="DetailsSendFather(data.id)">Detalles</button>-->
+                            <button class="btnEliminar btn btn-warning  col-md-5" (click)="Deactivate(data.id)">Eliminar</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>   
+</ng-container>

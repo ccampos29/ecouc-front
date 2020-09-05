@@ -13,7 +13,7 @@ import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http'
     FormsModule,
     HttpClientModule,
   ],
-  exports:[
+  exports: [
     UserLoginComponent
   ],
   providers: [
