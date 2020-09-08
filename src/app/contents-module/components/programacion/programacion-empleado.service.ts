@@ -1,7 +1,7 @@
 import { GeneralServicesService } from './../../general-services.service';
 import { GlobalConstants } from './../../../common/global-constants';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Observer } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
@@ -48,6 +48,13 @@ export class ProgramacionEmpleadoService {
     return this.http.post(GlobalConstants.URL_PROGRAMACION_USUARIO + '/viewAllOne',
     {
       user: userId
+    }, this.httpOptions);
+  }
+  eliminarProgramacionXempleado(ident): Observable<any> {
+    console.log("identificacion desde el servicio",ident);
+    return this.http.post(GlobalConstants.URL_PROGRAMACION_USUARIO + '/delete',
+    {
+      id: ident
     }, this.httpOptions);
   }
 }

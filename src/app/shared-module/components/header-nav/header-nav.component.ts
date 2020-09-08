@@ -36,7 +36,6 @@ export class HeaderNavComponent implements OnInit {
   }
 
   private deleteCredentialsStorage() {
-    console.log("entro");
     return new Promise(function(success, error){
       sessionStorage.removeItem('credentials');
       if (localStorage.getItem('credentials') === 'null' || localStorage.getItem('credentials') === null) {

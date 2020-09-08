@@ -61,5 +61,14 @@ export class ProgramacionEmpleadoVisualizarComponent implements OnInit {
   }*/
   Deactivate(id) {
     console.log(id);
+    this.programacionEmpleadoService.eliminarProgramacionXempleado(id).subscribe(
+      (programacion) => {
+        console.log(programacion);
+        this.visualizarProgramacionEmpleado();
+      },
+      (err) => {
+        console.log(err);
+      }
+    );
   }
 }

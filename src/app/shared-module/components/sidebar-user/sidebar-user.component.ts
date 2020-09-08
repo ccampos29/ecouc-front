@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarUserComponent implements OnInit {
 
+  UserName="usuario no registrado";
+
   constructor() { }
 
   ngOnInit(): void {
+    this.extractUsername();
+  }
+
+  private extractUsername() {
+    let data = JSON.parse(sessionStorage.getItem('credentials'));
+    if (data) {
+      this.UserName = data.username;
+    }
   }
 
 }
