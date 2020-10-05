@@ -15,6 +15,8 @@ import { ChartsComponent } from './components/charts/charts.component';
 
 import { ChartsModule } from 'ng2-charts';
 
+import { ChatComponent } from './components/chat/chat.component';
+
 @NgModule({
   declarations: [
     DefaultComponentComponent,
@@ -25,6 +27,7 @@ import { ChartsModule } from 'ng2-charts';
     ProgramacionEmpleadoVisualizarComponent,
     ChartsComponent,
     HeadquartersEmployeePickupComponent,
+    ChatComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +43,8 @@ import { ChartsModule } from 'ng2-charts';
     ProgramacionEmpleadoCreateComponent,
     ProgramacionEmpleadoVisualizarComponent,
     ChartsComponent,
-    HeadquartersEmployeePickupComponent
+    HeadquartersEmployeePickupComponent,
+    ChatComponent
   ],
 
 })

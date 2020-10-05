@@ -1,0 +1,50 @@
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-4 content-users">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a
+            *ngFor="let itemusuario of listaUsuario"
+            class="list-group-item list-group-item-action"
+            (click)="selectUserReceive(itemusuario.id)"
+            id="list-home-list"
+            data-toggle="list"
+            href="#"
+            role="tab"
+            >{{ itemusuario.userName }}</a
+          >
+        </div>
+      </div>
+      <div *ngIf="userReceiveId != null" class="col-8">
+        <div class="tab-content" id="nav-tabContent">
+          <div>
+            <p
+              *ngFor="let mess of messages"
+              [ngStyle]="{
+                'text-align':
+                mess.userId == user.id ? 'right' : 'left'
+              }"
+              
+            >
+              {{ mess.message }}
+            </p>
+          </div>
+          <div class="box bottom">
+            <textarea
+              [(ngModel)]="message"
+              class="form-control"
+              rows="3"
+            ></textarea>
+            <button
+              (click)="sendMessage()"
+              class="btn btn-outline-primary mt-2"
+              type="button"
+            >
+              ENVIAR
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

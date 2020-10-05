@@ -1,0 +1,14 @@
+.content-users {
+  height: 80vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.box {
+  position: absolute;
+  width: 95%;
+}
+
+.bottom {
+  bottom: 0;
+}

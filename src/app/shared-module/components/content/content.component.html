@@ -41,8 +41,12 @@
   </ng-container>
 </ng-template>
 <ng-template #recogidaEmpleadoSede>
-  <ng-container *ngIf="this.Component ==='recogidaEmpleadoSede'">
+  <ng-container *ngIf="this.Component ==='recogidaEmpleadoSede'; else chat">
  <app-headquarters-employee-pickup></app-headquarters-employee-pickup>
   </ng-container>
 </ng-template>
-
+<ng-template #chat>
+  <ng-container *ngIf="this.Component ==='chat'">
+ <app-chat></app-chat>
+  </ng-container>
+</ng-template>
