@@ -17,7 +17,7 @@
       </div>
       <div *ngIf="userReceiveId != null" class="col-8">
         <div class="tab-content" id="nav-tabContent">
-          <div>
+          <div *ngIf="user != null">
             <p
               *ngFor="let mess of messages"
               [ngStyle]="{

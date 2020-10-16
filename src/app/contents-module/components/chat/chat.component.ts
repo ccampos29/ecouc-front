@@ -10,7 +10,7 @@ import Pusher from "pusher-js";
 export class ChatComponent implements OnInit {
   listaUsuario = [];
   userReceiveId: null;
-  user = "";
+  user = null;
   message = "";
   messages = [];
   private pusherClient: Pusher;
