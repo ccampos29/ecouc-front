@@ -38,8 +38,8 @@ export class ProgramacionEmpleadoVisualizarComponent implements OnInit {
   visualizarProgramacionEmpleado(){
     this.programacionEmpleadoService.visualizarProgramacionXempleado(this.formUsuario.value.usuario).subscribe(
       (programacion) => {
-        console.log(programacion);
-        this.listaProgramacionesXempleado = programacion;
+        console.log(programacion.schedule);
+        this.listaProgramacionesXempleado = programacion.schedule;
       },
       (err) => {
         console.log(err);

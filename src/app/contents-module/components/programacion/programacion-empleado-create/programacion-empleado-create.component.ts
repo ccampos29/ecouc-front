@@ -57,10 +57,19 @@ export class ProgramacionEmpleadoCreateComponent implements OnInit {
   }
 
   iniciarFormularioProgramacion() {
+    let date = new Date();
+    let month = date.getUTCMonth() + 1; //months from 1-12
+    let day = date.getUTCDate();
+    let year = date.getUTCFullYear();
+    
+    let hour =   date.getHours() 
+    let minutes = date.getMinutes() 
+    let seconds = date.getSeconds() 
+
     this.formProgramacion = new FormGroup({
-      dia: new FormControl(''),
-      horaIni: new FormControl('', [Validators.required, Validators.minLength(5)]),
-      horaFin: new FormControl('', [Validators.required, Validators.minLength(5)]),
+      dia: new FormControl(`${year}-${month}-${day}`),
+      horaIni: new FormControl(`${hour}:${minutes}:${seconds}`, [Validators.required, Validators.minLength(5)]),
+      horaFin: new FormControl(`${hour}:${minutes}:${seconds}`, [Validators.required, Validators.minLength(5)]),
       user: new FormControl(''),
       facultadXsede: new FormControl(''),
     });
